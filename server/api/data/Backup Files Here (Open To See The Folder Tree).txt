@@ -1,0 +1,10 @@
+ comments.json                                          profile/
+ connections.json                                       profile.json
+ contacts.json                                          saved.json
+ direct/                                                searches.json
+ likes.json                                             settings.json
+ media.json                                             stories/
+ messages.json                                          photos/
+
+ ** Files Must be direct in here no further folders must be created
+report any errors @mainigautam telegram 
