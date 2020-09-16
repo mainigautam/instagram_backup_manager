@@ -23,7 +23,8 @@ You have links and methods for those below.
 
 ## Setup 
 **[*]** It's Pretty Easy just clone the code by opening terminal/cmd and type:
-`git clone https://github.com/mainigautam/instagram_backup_manager.git -b igbm-0.1 igbm`
+
+ `git clone https://github.com/mainigautam/instagram_backup_manager.git -b igbm-0.1 igbm`
 
 **[*]** this will create a folder named **"igbm"** with all the code 
 
