@@ -54,21 +54,21 @@ then type
  Feel Free To Give Pull Requests and Comment Feature Requests . This is a initial push the automated and more cleaner version will be uploaded soon . For Now 
  it  Can 
  
--[X]Display Profile Data With Images
--[X]Stories Archive (Pics and Videos)
--[X]Direct Messages With Likes ,TimeStamps , Pics Sent (By You Only due to limitations)
--[X]Group Chats 
--[X]Followers and Following Number and List .
--[X]Can Load On Your Mobile Via React's Local IP server in full mobile view 
+- [X] Display Profile Data With Images
+- [X] Stories Archive (Pics and Videos)
+- [X] Direct Messages With Likes ,TimeStamps , Pics Sent (By You Only due to limitations)
+- [X] Group Chats 
+- [X] Followers and Following Number and List .
+- [X] Can Load On Your Mobile Via React's Local IP server in full mobile view 
 
-Known Bugs are : -Timeline Feature Dosen't works for now
-                 -Zoomed Post Pics are not supported in mobile view for now 
-                 -Group Participant names are not shown in header of Group's DM
-                 -Tell More If You Find 
+Known Bugs are : - Timeline Feature Dosen't works for now
+                 - Zoomed Post Pics are not supported in mobile view for now 
+                 - Group Participant names are not shown in header of Group's DM
+                 - Tell More If You Find 
 
 
->**All The Code and Assests of This project are created by me only not copy pasted or pirated**
+> **All The Code and Assests of This project are created by me only not copy pasted or pirated**
 
->**Note: Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes, comments and the pictures sent by your friends 
+> **Note: Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes, comments and the pictures sent by your friends 
  and i cannot do anything about the stuff instagram itself dosen't provide** 
  
