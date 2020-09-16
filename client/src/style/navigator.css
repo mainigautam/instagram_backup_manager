@@ -1,0 +1,44 @@
+body{
+    margin: 0px;
+    padding:0px;
+}
+.navCard{
+    background-color: #222121;
+    color: white;
+    text-decoration: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
+    vertical-align: middle;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    /* animation-duration: 4s;
+    animation-name: fas;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; */
+}
+/* @keyframes fas {
+    0% {
+        background-color: rgb(26, 87, 255);
+    }
+    25% {
+        background-color: rgb(174, 34, 255);
+    }
+    50% {
+        background-color: rgb(26, 87, 255);
+    }
+    75%{
+        background-color: rgb(148, 34, 255);
+    }
+    100%{
+        background-color: rgb(26, 87, 255);
+    }
+} */
+.navCard:hover{
+    background-color: azure;
+    color: black;
+}

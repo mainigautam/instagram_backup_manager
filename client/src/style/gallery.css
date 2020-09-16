@@ -1,0 +1,109 @@
+.storyImage{
+    width: 175px;
+    height: 310px;
+}
+
+.storyDiv{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+    margin:5px;
+    padding:5px;
+    cursor: pointer;
+}
+.storyDiv:hover{
+    /* z-index: !important; */
+    opacity: 75%;
+}
+.storyArea{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+video{
+    width: 175px;
+    height: 310px;
+}
+@media screen and (max-width: 480px) {
+    .storyImage{
+        width: 110px;
+        height: 210px;
+    }
+    .storyDiv{
+        display: inline-block;
+        position: relative;
+        vertical-align: middle;
+        align-content: center;
+        align-items: center;
+        margin:0.5px;
+        padding:0.5px;
+    }
+    .storyArea{
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        padding: 0;
+        /* padding-top: 20px;
+        padding-bottom: 20px; */
+    }
+    video{
+        width: 110px;
+        height: 210px;
+    }
+}
+.ImageModal{
+    top:50%;
+    left:50%;
+    margin: 0px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: +4;
+}
+.modalBlur{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.425);
+    z-index: +3;
+    margin: 0px;
+    width: 100%;
+    top:0px;
+    height: 100%;
+}
+.modalDiv{
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    align-content: center;
+    align-items: center;
+    margin:5px;
+    padding:5px;
+    cursor: pointer;
+}
+.modalImage{
+    width: 350px;
+    height: 620px;
+}
+.modalVideo{
+    width: 350px;
+    height: 620px;
+}
+.modalClose{
+    font-size: 80px;
+    float: right;
+    cursor: pointer;
+}
+.lazyLoader{
+    top:50%;
+    left:50%;
+    margin: 0px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    z-index: +4;
+}
+.coverScreen{
+    width: 100%;
+    height: 100%;
+}

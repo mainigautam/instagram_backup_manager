@@ -1,0 +1,193 @@
+.black{
+    background-color: #000 !important;
+}
+body{
+    background-color:#000;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 0px!important;
+    padding: 0;
+    color : #fff !important;
+}
+.titleBarInbox{
+    background-color: #222121;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    top: 0px;
+    margin:0px;
+    border-bottom-style: solid;
+    border-width: 0.0025px;
+    border-color: #000000;
+    /* animation-duration: 4s;
+    animation-name: logo;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out; */
+    z-index: +1;
+    /* box-shadow: 2px 2px 2px 2px rgba(8, 0, 0, 0.308); */
+}
+.inbox{
+    /* margin-top: 1px; */
+    background-color: #000;
+    width: 100%;
+    height: 50px !important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 90%;
+}
+.inbox:hover{
+    background-color: #222121;
+}
+.titleText{
+    padding: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif   ;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    position: relative;
+    opacity: 100%;
+}
+/* @keyframes logo {
+    0% {
+        background-color: rgba(131,58,180);
+    }
+    25% {
+        background-color: rgba(193,53,132);
+    }
+    50% {
+        background-color: rgb(131, 58, 180);
+    }
+    75%{
+        background-color: rgba(193,53,132);
+    }
+    100%{
+        background-color: rgba(131,58,180);
+    }
+} */
+.profileCircle{
+    background-image: linear-gradient(360deg,rgba(255,220,128),rgba(193,53,132),rgba(131,58,180));   
+    color: #fff;
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    padding: 1px;
+}
+.subCircle{
+    background-color: rgb(7, 0, 0);
+    border-radius: 100%;
+    width: 50px;
+    height: 50px;
+    vertical-align: middle;
+    text-align: center;
+}
+.profileInitials {
+    top: 12.5px; 
+    font-size: 25px;
+    line-height: 25px; 
+    color: #fff!important;
+    font-weight: bold;
+    font-family: sans-serif;
+    position: relative;
+    text-transform: uppercase;
+  }
+hr{
+    background: #2d3436;
+    text-emphasis: none;
+    text-decoration: none;
+    height: 2px;
+    margin: 0px;
+    border: none;
+    padding: 0px;
+}
+.friendName{
+    position: relative;
+    display: inline-block;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif   ;
+}
+.footNav{
+    background-color: #222121;
+    width: 100%;
+    height: 50px;
+    bottom: 0px;
+    position: fixed;
+    border-top-style: solid;
+    border-width: 0.0025px;
+    border-color: #000000;
+    /* margin-left:10px; */
+    z-index: +2;    
+    animation-duration: 4s;
+    animation-name: logo;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-in-out;
+    box-shadow: 2px 2px 2px 2px rgba(8, 0, 0, 0.308);
+}
+.footText{
+    padding-bottom: 10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif   ;
+    font-weight: bold;
+    font-size: larger;
+    text-align: center;
+    z-index: +1;
+    vertical-align: middle;
+    opacity: 100%;
+    display: inline-block;
+    padding-left: 10px;
+}
+@media screen and (max-width: 480px) {
+    .footText{
+        /* visibility: hidden!important; */
+        margin:0px!important;
+        padding: 0px!important;
+        /* font-size: 0px!important; */
+    }
+    .inbox{
+        /* margin-top: 1px; */
+        background-color: #000;
+        width: 100%;
+        height: 50px !important;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: inline-block;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        opacity: 90%;
+        overflow: hidden;
+    }
+}
+/* @media screen and (max-height: 420px) {
+    .footText{
+        visibility: hidden!important;
+        margin:0px!important;
+        padding: 0px!important;
+        font-size: 0px!important;
+    }
+} */
+.backNav{
+    color: white!important;
+    margin: 0px;
+    padding: 0px;
+    position: fixed;
+    padding: 10px;
+    text-decoration: none;
+    z-index: +1;
+}
+.text-center{
+    text-align: center!important;
+
+}
+.white{
+    color:white!important;
+}
+a{
+    text-decoration: none;
+    color: white;
+    opacity: 95%;
+}

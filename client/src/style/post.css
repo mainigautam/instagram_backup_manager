@@ -1,0 +1,195 @@
+.post{
+    top:48%;
+    left:50%;
+    margin: 0px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    padding-top: 100px;
+}
+.postZoomSection{
+    display: block;
+    position: relative;
+    width: 400px;
+    height: 600px;
+}
+.postHeader{
+    width: 400px;
+    height: 60px;
+    display: inline-block;
+    background-color: #222121;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.profileInitials{
+    overflow: hidden;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.profilePicInitials{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    display: inline-block;
+    vertical-align: baseline;
+}
+.postPic{
+    width: 400px;
+    height: 400px;
+}
+.postPicHolder{
+    display: inline-block;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    margin:0px;
+    padding: 0px;
+}
+.postFooter{
+    width: 380px;
+    height: 80px;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background-color: #222121;
+    margin-bottom: 100px;
+    text-align: start;
+    padding: 10px;
+}
+.postUser{
+    display: inline-block;
+    line-height: 100%;
+    margin-bottom: 15px;
+    vertical-align: text-top;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-left: 10px;
+
+}
+.postDate{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    opacity: 50%;
+    display: block;
+    align-self: start;
+    font-size:10px;
+    line-height: 90px;
+    letter-spacing: 1px;;
+}
+.postCaption{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: inline-block;
+    align-self: start;
+    vertical-align: bottom;
+    text-overflow: break-word;
+    font-size: 15px;
+}
+.postLocation{
+    display: block;
+    margin-left: 70px;
+    margin-bottom: 30px;
+    line-height: 0%;
+    font-size:12px;
+    opacity: 70%;
+}
+@media screen and (max-width: 480px) {
+    .post{
+        bottom: 50%;
+        top: 37%;
+        margin: 0px;
+        position: absolute;
+        transform: translate(-50%,-200%);
+        padding-top: 50px;
+    }
+    .postZoomSection{
+        display: block;
+        position: relative;
+        width: 300px;
+        height: 300px;
+    }
+    .postHeader{
+        width: 300px;
+        height: 50px;
+        display: inline-block;
+        background-color: #222121;
+        border-top-left-radius: 7.5px;
+        border-top-right-radius: 7.5px;
+    }
+    .profileInitials{
+        overflow: hidden;
+        margin-left: 10px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: bottom;
+    }
+    .profilePicInitials{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%;
+        display: inline-block;
+        vertical-align: baseline;
+    }
+    .postPic{
+        width: 300px;
+        height: 300px;
+    }
+    .postPicHolder{
+        display: inline-block;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+        margin:0px;
+        padding: 0px;
+    }
+    .postFooter{
+        width: 280px;
+        height: 40px;
+        border-bottom-right-radius: 7.5px;
+        border-bottom-left-radius: 7.5px;
+        background-color: #222121;
+        margin-bottom: 50px;
+        text-align: start;
+        padding: 10px;
+    }
+    .postUser{
+        display: inline-block;
+        line-height: 100%;
+        font-size: 13px ;
+        margin-bottom: 7.5px;
+        vertical-align: text-top;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        margin-left: 5px;
+    
+    }
+    .postDate{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        opacity: 50%;
+        display: inline-flex;
+        align-self: start;
+        font-size:8px;
+        line-height: 0px;
+        letter-spacing: 0.5px;
+    }
+    .sticker{
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+    }
+    .postCaption{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        display: inline-block;
+        align-self: start;
+        vertical-align: bottom;
+        text-overflow: break-word;
+        font-size: 11px;
+        font-weight: lighter;
+        opacity: 90%;
+        height: 50%;
+    }
+    .postLocation{
+        display: block;
+        margin-left: 35px;
+        margin-bottom: 15px;
+        line-height: 0%;
+        font-size:6px;
+        opacity: 70%;
+    }
+}

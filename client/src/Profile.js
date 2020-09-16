@@ -1,0 +1,147 @@
+import React , { useState, useEffect} from 'react';
+import {Link} from 'react-router-dom';
+import './style/profile.css'
+import './style/navigator.css'
+import './style/inbox.css'
+import './style/messages.css'
+import StatModal from './Components/StatModal';
+const Profile = () => {
+
+    //API DataSet
+    const [profile , setProfile] = useState();
+    const [media , setMedia] = useState();
+    const [connections , setConnections] = useState();
+    const [loading , setLoading] = useState(true);
+    const [show , setShow] = useState(false);
+    const [selection, setSelection] = useState('')
+    const close =()=> setShow(false);
+    const fetchData = async () => {
+        const result= await Promise.all([
+            fetch('/profile'),
+            fetch('/connections'),
+            fetch('/media')
+        ]).then(function (responses) {
+            return Promise.all(responses.map(function (response) {
+                return response.json();
+        }));})
+        setProfile(result[0]);
+        setMedia(result[2]);
+        setConnections(result[1]);
+        setLoading(false)
+    }
+    useEffect( ()=>{
+        fetchData();
+    },[]);
+    
+    
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// 
+if(loading){
+    return(
+            <>
+                <div className="coverScreen">
+                    <img src="https://img.icons8.com/nolan/50/instagram-new.png" alt="" className="lazyLoader"/>
+                </div>
+            </>
+    )}else{
+    return (
+    <>
+        <div className="titleBarInbox" style={{border: "none"}}>
+            <div className="titleText text-center">
+                Instagram Backup Manager
+            </div>
+        </div>
+
+        {/* Header Section Begins Here */}
+        <div className='header'>
+            <img src={media.profile[0].path} alt="" className='profilePhoto' />
+            <div className='statsHolder'>
+                <div className='userName'>
+                            {profile.username}
+                </div>
+                <div className="stats">
+                    {<b>
+                        {media.photos.length}
+                    </b>} posts&nbsp; 
+                    {<b> 
+                        {Object.keys(connections.followers).length}&nbsp; 
+                    </b>}
+                    <span className="statClick" onClick={(e)=>{setSelection('followers');setShow(true)}}>
+                        followers&nbsp;
+                    </span>
+                    {<b> 
+                        {Object.keys(connections.following).length}&nbsp; 
+                    </b>} 
+                    <span className="statClick" onClick={(e)=>{setSelection('following');setShow(true)}}>
+                        following&nbsp;
+                    </span>
+                </div>
+                <StatModal connections={connections} shw={show} selection={selection} close={close}/>
+                <div className='fullName'>
+                    {profile.name}
+                </div>
+                <div className="bio">
+                    {profile.biography}
+                </div>
+            </div>
+            <div className="bio-alt">
+                    {profile.biography}
+                </div>
+        </div>
+        <hr/>
+        {/* Header Section Ends Here */}
+
+        {/* Posts Section Starts Here */}
+        <div className="postArea">
+        {media.photos.map((post,i)=>{
+            return(
+                <Link to={`/photo/${i}`} key={i}> 
+                    <div className="postDiv" >
+                        <img src={post.path} alt={post.caption}  className="postImage" />
+                    </div>
+                </Link>
+           )
+        })}
+        </div>  
+        {/* Posts Section Ends Here */}
+
+        {/*Footer Starts Here  */}
+        <div className='footNav footText'>
+        <Link to="/timeline">
+                <div className='footBut'>
+                    <i className="fas fa-2x fa-clock"></i>
+                    <div className="footText">
+                        Timeline
+                    </div>
+                </div>
+            </Link>
+            <Link to="/direct">
+                <div className='footBut'>
+                    <i className="fas fa-2x fa-paper-plane"></i>
+                    <div className="footText">
+                        Direct
+                    </div>
+                </div>
+            </Link>
+            <Link to="/">
+                <div className='footBut'>
+                    <i className="fas fa-2x fa-user icon-selected"></i>
+                    <div className="footText">
+                        Profile
+                    </div>
+                </div>
+            </Link>
+            <Link to="/media">
+                <div className='footBut'>
+                    <i className="fas fa-2x fa-photo-video"></i>
+                    <div className="footText">
+                        Stories
+                    </div>
+                </div>
+            </Link>
+        </div>
+    </>
+    )
+  }
+}
+
+export default Profile
