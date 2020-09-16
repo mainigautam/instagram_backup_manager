@@ -1,4 +1,4 @@
-# instagram_backup_manager
+# Instagram Backup Manager
 This Is A Simple React+Node App , Which Makes Your Instagram Backup Data Readable to A Very High Extent:
 
 ## Pre-Requisite
