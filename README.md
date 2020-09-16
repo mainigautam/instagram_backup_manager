@@ -74,3 +74,6 @@ then type
 > **Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes, comments and the pictures sent by your friends 
  and i cannot do anything about the stuff instagram itself dosen't provide** 
  
+ ### Thanks To Makers Of
+ Node.js React.js Concurrently Nodemon Express.js Facebook(LLC)
+ 
