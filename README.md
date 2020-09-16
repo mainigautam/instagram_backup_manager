@@ -10,7 +10,7 @@ You have links and methods for those below.
 ## Requirements
 
 ### Windows Users
-[Download Node.js](https://nodejs.org/en/download/)
+[Download Node.js](https://nodejs.org/en/download/) ,
 [Download Git for Windows](https://git-scm.com/download/win)
 
 ### Linux Users 
@@ -22,10 +22,10 @@ You have links and methods for those below.
 
 
 ## Setup 
-It's Pretty Easy just clone the code by opening terminal/cmd and type:
+**[*]** It's Pretty Easy just clone the code by opening terminal/cmd and type:
 `git clone https://github.com/mainigautam/instagram_backup_manager.git -b igbm-0.1 igbm`
 
-this will create a folder named **"igbm** with all the code 
+**[*]** this will create a folder named **"igbm"** with all the code 
 
 Now Take Your Instagram Backup and Extract all the files into **server/api/data directory** (directly without any nesting)
 
@@ -36,39 +36,39 @@ then type
 
 `npm install`
 
-after completion type 
+**[*]** after completion type 
 
  `cd server && npm install`
  
- after that, setup the final client page dependencies by :
+ **[*]** after that, setup the final client page dependencies by :
  
  `cd ../ && cd client && npm install`
  
- After you are done installing the dependencies Close the terminal and open it again in igbm directory and type:
+ **[*]** After you are done installing the dependencies Close the terminal and open it again in igbm directory and type:
  
  `npm start`
  
  
  this will open the browser with your backup opened as instagram's format to the best format .
  
- **Note: Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes, comments and the pictures sent by your friends 
- and i cannot do anything about the stuff instagram itself dosen't provide** 
- 
  Feel Free To Give Pull Requests and Comment Feature Requests . This is a initial push the automated and more cleaner version will be uploaded soon . For Now 
  it  Can 
  
-[X]Display Profile Data With Images
-[X]Stories Archive (Pics and Videos)
-[X]Direct Messages With Likes ,TimeStamps , Pics Sent (By You Only due to limitations)
-[X]Group Chats 
-[X]Followers and Following Number and List .
-[X]Can Load On Your Mobile Via React's Local IP server in full mobile view 
+-[X]Display Profile Data With Images
+-[X]Stories Archive (Pics and Videos)
+-[X]Direct Messages With Likes ,TimeStamps , Pics Sent (By You Only due to limitations)
+-[X]Group Chats 
+-[X]Followers and Following Number and List .
+-[X]Can Load On Your Mobile Via React's Local IP server in full mobile view 
 
-Known Bugs are : Timeline Feature Dosen't works for now
-                 Zoomed Post Pics are not supported in mobile view for now 
-                 Group Participant names are not shown in header of Group's DM
-                 Tell More If You Find 
+Known Bugs are : -Timeline Feature Dosen't works for now
+                 -Zoomed Post Pics are not supported in mobile view for now 
+                 -Group Participant names are not shown in header of Group's DM
+                 -Tell More If You Find 
 
 
-**All The Code and Assests of This project are created by me only not copy pasted or pirated**
+>**All The Code and Assests of This project are created by me only not copy pasted or pirated**
 
+>**Note: Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes, comments and the pictures sent by your friends 
+ and i cannot do anything about the stuff instagram itself dosen't provide** 
+ 
