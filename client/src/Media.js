@@ -44,6 +44,7 @@ if(loading){
                     </div>
                 
                     {/* Stories Gallery Starts Here */}
+                    {media.stories !== undefined ?
                     <div className="storyArea">
                     {media.stories.map((story,i)=>{
                         if(story.path.split('.').pop() === "mp4"){
@@ -75,7 +76,11 @@ if(loading){
                             )
                         }
                     })}
+                    </div> :
+                    <div className="storyArea noPost">
+                        No Stories Were Uploaded At The Time This Backup Was Created
                     </div>
+                    }
 
                     {/* Modal Implement */}
                     <Modal 

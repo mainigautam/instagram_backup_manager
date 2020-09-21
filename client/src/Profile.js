@@ -60,20 +60,30 @@ if(loading){
                 </div>
                 <div className="stats">
                     {<b>
-                        {media.photos.length}
+                        {media.photos === undefined ? 0 : media.photos.length}
                     </b>} posts&nbsp; 
                     {<b> 
-                        {Object.keys(connections.followers).length}&nbsp; 
+                        {connections.hasOwnProperty("followers") ? Object.keys(connections.followers).length: 0 }&nbsp; 
                     </b>}
-                    <span className="statClick" onClick={(e)=>{setSelection('followers');setShow(true)}}>
-                        followers&nbsp;
-                    </span>
+                    { connections.hasOwnProperty("followers") ?
+                        <span className="statClick" onClick={(e)=>{setSelection('followers');setShow(true)}}>
+                            followers&nbsp;
+                        </span> :
+                        <span className="statClick" >
+                            followers&nbsp;
+                        </span>
+                    }
                     {<b> 
-                        {Object.keys(connections.following).length}&nbsp; 
+                        {connections.hasOwnProperty("following") ? Object.keys(connections.following).length: 0 }&nbsp; 
                     </b>} 
-                    <span className="statClick" onClick={(e)=>{setSelection('following');setShow(true)}}>
-                        following&nbsp;
-                    </span>
+                    { connections.hasOwnProperty("following") ?
+                        <span className="statClick" onClick={(e)=>{setSelection('following');setShow(true)}}>
+                            following&nbsp;
+                        </span> :
+                        <span className="statClick" >
+                            following&nbsp;
+                        </span>
+                    }
                 </div>
                 <StatModal connections={connections} shw={show} selection={selection} close={close}/>
                 <div className='fullName'>
@@ -91,6 +101,11 @@ if(loading){
         {/* Header Section Ends Here */}
 
         {/* Posts Section Starts Here */}
+        {media.photos === undefined?
+            <div className="noPost">
+                No Posts Were Uploaded By You At The Time This Backup Was Generated!
+            </div>
+        :
         <div className="postArea">
         {media.photos.map((post,i)=>{
             return(
@@ -101,7 +116,7 @@ if(loading){
                 </Link>
            )
         })}
-        </div>  
+        </div>} 
         {/* Posts Section Ends Here */}
 
         {/*Footer Starts Here  */}
