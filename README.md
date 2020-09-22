@@ -31,9 +31,8 @@ You have links and methods for those below.
 **[*]** Now Take Your Instagram Backup and Extract all the files into **server/api/data directory** (directly without any nesting)
 
 **[*]** After that go back to igbm directory and open terminal in that folder by right clicking on **Linux/MacOS** and 
-Command Prompt by pressing **Shift + Right Click** On **Windows** 
-
-then copy the following command :
+Command Prompt by pressing **Shift + Right Click** On **Windows** .
+**Then copy the following command :**
 
 `npm install && npm run dep`
  
@@ -41,10 +40,7 @@ then copy the following command :
  
  `npm start`
  
- this will open the browser with your backup opened as instagram's format to the best format .
- 
- Feel Free To Give Pull Requests and Comment Feature Requests . This is a initial push the automated and more cleaner version will be uploaded soon . For Now 
- it  Can 
+ This will open the browser window automatically with your backup loaded, In custom but to the best Instagram's Clone format .
  
  ## Features
 - [X] Display Profile Data With Images
@@ -56,8 +52,8 @@ then copy the following command :
 
 ## Todo:
 - [x] Reduce the install steps
-- [] Add Upload zip and go feature
-- [] Convert to native app 
+- [ ] Add Upload zip and go feature
+- [ ] Convert to native app 
 
 ## Known Bugs
 - ~~The Data with 0 following, followers or posts isn't loading~~
@@ -71,6 +67,8 @@ then copy the following command :
 
 > **Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes, comments and the pictures sent by your friends 
  and i cannot do anything about the stuff instagram itself dosen't provide** 
+
+>  **Feel Free To Give Pull Requests and Comment Feature Requests . This is a initial push the automated and more cleaner version will be pushed ASAP.**
  
  ### Thanks To Makers Of
  Node.js React.js Concurrently Nodemon Express.js Facebook(LLC)
