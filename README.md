@@ -28,32 +28,19 @@ You have links and methods for those below.
 
 **[*]** this will create a folder named **"igbm"** with all the code 
 
-Now Take Your Instagram Backup and Extract all the files into **server/api/data directory** (directly without any nesting)
+**[*]** Now Take Your Instagram Backup and Extract all the files into **server/api/data directory** (directly without any nesting)
 
-after that go back to igbm directory and open terminal in that folder by right clicking on **Linux/MacOS** and 
-Command Prompt by pressing **Shift + Right Click** On **Windows** 
+**[*]** After that go back to igbm directory and open terminal in that folder by right clicking on **Linux/MacOS** and 
+Command Prompt by pressing **Shift + Right Click** On **Windows** .
+**Then copy the following command :**
 
-then type 
-
-`npm install`
-
-**[*]** after completion type 
-
- `cd server && npm install`
- 
- **[*]** after that, setup the final client page dependencies by :
- 
- `cd ../ && cd client && npm install`
+`npm install && npm run dep`
  
  **[*]** After you are done installing the dependencies Close the terminal and open it again in igbm directory and type:
  
  `npm start`
  
- 
- this will open the browser with your backup opened as instagram's format to the best format .
- 
- Feel Free To Give Pull Requests and Comment Feature Requests . This is a initial push the automated and more cleaner version will be uploaded soon . For Now 
- it  Can 
+ This will open the browser window automatically with your backup loaded, In custom but to the best Instagram's Clone format .
  
  ## Features
 - [X] Display Profile Data With Images
@@ -63,7 +50,13 @@ then type
 - [X] Followers and Following Number and List .
 - [X] Can Load On Your Mobile Via React's Local IP server in full mobile view 
 
+## Todo:
+- [x] Reduce the install steps
+- [ ] Add Upload zip and go feature
+- [ ] Convert to native app 
+
 ## Known Bugs
+- ~~The Data with 0 following, followers or posts isn't loading~~
 - Timeline Feature Dosen't works for now
 - Zoomed Post Pics are not supported in mobile view for now 
 - Group Participant names are not shown in header of Group's DM
@@ -74,6 +67,8 @@ then type
 
 > **Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes, comments and the pictures sent by your friends 
  and i cannot do anything about the stuff instagram itself dosen't provide** 
+
+>  **Feel Free To Give Pull Requests and Comment Feature Requests . This is a initial push the automated and more cleaner version will be pushed ASAP.**
  
  ### Thanks To Makers Of
  Node.js React.js Concurrently Nodemon Express.js Facebook(LLC)
