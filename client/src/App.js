@@ -1,7 +1,6 @@
 import React from 'react'
 import Profile from './Profile'
 import Media from './Media'
-// import Check from './dev/Check'
 import Direct from './Direct'
 import Messages from './Components/Messages'
 import Post from './Components/Post.js'
@@ -16,7 +15,6 @@ const App = () => {
             <Route exact path='/direct/:id' component={Messages} />
             <Route exact path='/timeline' component={Profile} />
             <Route exact path='/media' component={Media} />
-            {/* <Route exact path='/dev' component={Check} /> */}
         </Switch>
         </>
     )

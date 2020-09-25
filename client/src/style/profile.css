@@ -157,7 +157,7 @@
 
 /* @media screen and (max-height: 420px) {
 } */    
-.fa-photo-video , .fa-user , .fa-paper-plane , .fa-clock{
+/* .fa-photo-video , .fa-user , .fa-paper-plane , .fa-clock{
     color: transparent;
 	font-size: 40px;
 	-webkit-text-stroke: 2px white;
@@ -172,7 +172,7 @@
     color: white;
     font-size: 40px;
     -webkit-text-stroke: 0px transparent;
-}
+} */
 .statClick{
     cursor: pointer;
 }

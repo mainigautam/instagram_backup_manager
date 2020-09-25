@@ -1,7 +1,8 @@
 import React , {useState,useEffect} from 'react'
 import {Link} from 'react-router-dom';
 import './style/inbox.css'
-
+import './Components/Footer'
+import Footer from './Components/Footer';
 function Inbox() {
     //Fetch Data
     const [profile, setProfile] = useState([]);
@@ -94,40 +95,7 @@ if(loading){
                                     )})}
                                 </div>
                                 {/*Footer Starts Here  */}
-                                <div className='footNav footText'>
-                                <Link to="/timeline">
-                                        <div className='footBut'>
-                                            <i className="fas fa-2x fa-clock"></i>
-                                            <div className="footText">
-                                                Timeline
-                                            </div>
-                                        </div>
-                                    </Link>
-                                    <Link to="/direct">
-                                        <div className='footBut'>
-                                            <i className="fas fa-2x fa-paper-plane icon-selected"></i>
-                                            <div className="footText">
-                                                Direct
-                                            </div>
-                                        </div>
-                                    </Link>
-                                    <Link to="/">
-                                        <div className='footBut'>
-                                            <i className="fas fa-2x fa-user"></i>
-                                            <div className="footText">
-                                                Profile
-                                            </div>
-                                        </div>
-                                    </Link>
-                                    <Link to="/media">
-                                        <div className='footBut'>
-                                            <i className="fas fa-2x fa-photo-video"></i>
-                                            <div className="footText">
-                                                Stories
-                                            </div>
-                                        </div>
-                                    </Link>
-                                </div>
+                                <Footer />
                             </div>
                     );
                }
