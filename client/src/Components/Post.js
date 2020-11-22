@@ -37,7 +37,7 @@ if(loading){
                 <>
                     <div className="titleBarInbox">
                         <div className='backNav'>
-                            <Link to='/'>
+                            <Link to='/profile'>
                                 <i className="fas fa-2x fa-chevron-left white"></i>
                             </Link>
                         </div>
@@ -93,7 +93,7 @@ if(loading){
                                 </div>
                             </div>
                         </Link>
-                        <Link to="/">
+                        <Link to="/profile">
                             <div className='footBut'>
                                 <i className="fas fa-2x fa-user icon-selected"></i>
                                 <div className="footText">

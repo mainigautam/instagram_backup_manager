@@ -20,7 +20,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </Link>
-                <Link to="/">
+                <Link to="/profile">
                     <div className='footBut'>
                         <i className="fas fa-2x fa-user"></i>
                         <div className="footText">

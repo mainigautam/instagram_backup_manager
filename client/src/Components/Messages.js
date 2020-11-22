@@ -47,7 +47,6 @@ const Messages = ({match}) => {
         var mesArr = messages.map((conversation)=>{
         return conversation.conversation
         });
-        console.log(messages)
     }else{}
 
 //Main Body Render Start//
@@ -79,6 +78,7 @@ const Messages = ({match}) => {
                         </div>
                     </div>
                     {/* Map The Text Of Sender and Receiver */}
+                    {/*eslint-disable-next-line */}
                     {mesArr[id].reverse().map((chat,i)=>{
                         if(chat.sender===username){
                             if(chat.media !==undefined){
@@ -217,7 +217,7 @@ const Messages = ({match}) => {
                                     </div>
                                 </div>
                             </Link>
-                            <Link to="/">
+                            <Link to="/profile">
                                 <div className='footBut'>
                                     <i className="fas fa-2x fa-user"></i>
                                     <div className="footText">
