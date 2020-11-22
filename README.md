@@ -1,11 +1,9 @@
 # Instagram Backup Manager
-This Is A Simple React+Node App , Which Makes Your Instagram Backup Data Readable to A Very High Extent:
+ A Simple web application makes your Instagram Account Backup Data readable to a great extent .  
 
 ## Pre-Requisite
-You Have To Install Node_modules in three directories , 
-that is parent , server and client directory respectively,
-for that you must have node.js and git installed on your pc , 
-You have links and methods for those below.
+You must have node.js and git installed on your pc , 
+I have provided links and methods for those below.
 
 ## Requirements
 
@@ -24,23 +22,15 @@ You have links and methods for those below.
 ## Setup 
 **[*]** It's Pretty Easy just clone the code by opening terminal/cmd and type:
 
- `git clone https://github.com/mainigautam/instagram_backup_manager.git -b igbm-0.1 igbm`
+ `git clone https://github.com/mainigautam/instagram_backup_manager.git -b igbm-1.0 igbm`
 
 **[*]** this will create a folder named **"igbm"** with all the code 
 
-**[*]** Now Take Your Instagram Backup and Extract all the files into **server/api/data directory** (directly without any nesting)
+**[*]** After that go back to igbm directory and double click **setup.bat** to install all the dependencies.
 
-**[*]** After that go back to igbm directory and open terminal in that folder by right clicking on **Linux/MacOS** and 
-Command Prompt by pressing **Shift + Right Click** On **Windows** .
-**Then copy the following command :**
+**[*]** After Setup is Done double click On **run.bat**.
 
-`npm install && npm run dep`
- 
- **[*]** After you are done installing the dependencies Close the terminal and open it again in igbm directory and type:
- 
- `npm start`
- 
- This will open the browser window automatically with your backup loaded, In custom but to the best Instagram's Clone format .
+ This will open the browser window automatically. Then click on choose file and select your Instagram Backup's Zip File.
  
  ## Features
 - [X] Display Profile Data With Images
@@ -52,7 +42,7 @@ Command Prompt by pressing **Shift + Right Click** On **Windows** .
 
 ## Todo:
 - [x] Reduce the install steps
-- [ ] Add Upload zip and go feature
+- [x] Add Upload zip and go feature
 - [ ] Convert to native app 
 
 ## Known Bugs
@@ -68,8 +58,8 @@ Command Prompt by pressing **Shift + Right Click** On **Windows** .
 > **Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes, comments and the pictures sent by your friends 
  and i cannot do anything about the stuff instagram itself dosen't provide** 
 
->  **Feel Free To Give Pull Requests and Comment Feature Requests . This is a initial push the automated and more cleaner version will be pushed ASAP.**
+>  **Feel Free To Give Pull Requests and Comment Feature Requests.**
  
  ### Thanks To Makers Of
- Node.js React.js Concurrently Nodemon Express.js Facebook(LLC)
+ Node.js React.js Concurrently Nodemon Express.js Del Multer Facebook(LLC)
  
