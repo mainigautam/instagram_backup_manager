@@ -1,0 +1,26 @@
+body{
+    background-color: #2c3e50;
+    color: white;
+}
+.Online{
+    background-color: #2ecc71;
+    border-radius: 100%;
+    width: 100px;
+    display: inline-block;
+    height: 100px;
+    animation-name: blink;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink{
+    from{background-color: green;}
+    to{background-color: #2ecc71;}
+}
+.status{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 150px;
+    vertical-align: middle;
+    line-height: 300%;
+}
