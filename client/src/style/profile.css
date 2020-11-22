@@ -293,3 +293,25 @@
     padding: 100px;
     opacity: 80%;
 }
+.info{
+    display: flex;
+    float: right;
+    vertical-align: middle;
+    position: relative;
+    line-height: 70%;
+    cursor: pointer;
+}
+.trash{
+    display: flex;
+    float: left;
+    vertical-align: middle;
+    position: relative;
+    color:white;
+    margin-left: 10px;
+    margin-top: 5px;
+    background-color: transparent;
+    border-width: 0px;
+    outline: none;
+    cursor: pointer;
+    z-index: +1;
+}

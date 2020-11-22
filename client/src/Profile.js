@@ -8,7 +8,7 @@ import './style/messages.css'
 import StatModal from './Components/StatModal';
 const Profile = () => {
 
-    //API DataSet
+    //API <DataSet></DataSet>
     const [profile , setProfile] = useState();
     const [media , setMedia] = useState();
     const [connections , setConnections] = useState();
@@ -47,8 +47,16 @@ if(loading){
     return (
     <>
         <div className="titleBarInbox" style={{border: "none"}}>
+            <form action="http://localhost:9000/delete" method="post">
+                <button type="submit" className="trash">
+                    <i className="fas fa-2x fa-trash-alt"></i>   
+                </button>
+            </form>
             <div className="titleText text-center">
                 Instagram Backup Manager
+                <span onClick={(e)=>{alert("Hello")}}>
+                    <i className="fas fa-2x fa-info-circle info"></i>
+                </span>
             </div>
         </div>
 

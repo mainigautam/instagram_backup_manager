@@ -13,11 +13,10 @@ app.listen(port, ()=>{
     console.log("Server is Up And Running , We are Serving Files Now!")
 });
 
-app.use('/stories/' , express.static(__dirname + "/api/data/stories"));
-app.use('/photos/' , express.static(__dirname + "/api/data/photos"));
-app.use('/photo/:id' , express.static(__dirname + "/api/data/photos"));
-app.use('/photo/:id' , express.static(__dirname + "/api/data/profile"));
-app.use('/profile/' , express.static(__dirname + "/api/data/profile"));
-app.use('/direct/direct/' , express.static(__dirname + "/api/data/direct"));
-
-
+app.use('/stories/' , express.static("../data/stories"));
+app.use('/photos/' , express.static("../data/photos"));
+app.use('/photo/:id' , express.static("../data/photos"));
+app.use('/photo/:id' , express.static("../data/profile"));
+app.use('/profile/' , express.static("../data/profile"));
+app.use('/direct/direct/' , express.static("../data/direct"));
+app.use('/server.css' , express.static(__dirname + "/api/routes/server.css"))
