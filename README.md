@@ -2,10 +2,10 @@
  A Simple web application makes your Instagram Account Backup Data readable to a great extent .  
 
 ## Pre-Requisite
-You must have node.js and git installed on your pc , 
+You must have internet connection (to install dependencies and load CSS Elements) and You Must have node.js , git installed on your pc , 
 I have provided links and methods for those below.
 
-## Requirements
+## How to Setup
 
 ### Windows Users
 [Download Node.js](https://nodejs.org/en/download/) ,
