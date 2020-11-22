@@ -1,1 +1,1 @@
-npm run dep
+npm install && npm run dep
