@@ -1,6 +1,6 @@
 const mediaRoute = (app,fs) => {
 
-    const dataPath = "./api/data/media.json"
+    const dataPath = "../data/media.json"
     // READ
     app.get("/media", (req, res) => {
       fs.readFile(dataPath, "utf8", (err, data) => {

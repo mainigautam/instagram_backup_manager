@@ -1,6 +1,6 @@
 const messageRoute = (app,fs) => {
 
-    const dataPath = "./api/data/messages.json"
+    const dataPath = "../data/messages.json"
 
     // READ
     app.get("/messages", (req, res) => {

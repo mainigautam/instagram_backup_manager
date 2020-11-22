@@ -1,6 +1,6 @@
 const profileRoute = (app,fs) => {
 
-    const dataPath = "./api/data/profile.json"
+    const dataPath = "../data/profile.json"
     // READ
     app.get("/profile", (req, res) => {
       fs.readFile(dataPath, "utf8", (err, data) => {

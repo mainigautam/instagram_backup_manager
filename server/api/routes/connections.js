@@ -1,6 +1,6 @@
 const connectionsRoute = (app,fs) => {
 
-    const dataPath = "./api/data/connections.json"
+    const dataPath = "../data/connections.json"
     // READ
     app.get("/connections", (req, res) => {
       fs.readFile(dataPath, "utf8", (err, data) => {
