@@ -50,6 +50,7 @@ I have provided links and methods for those below.
 - Timeline Feature Dosen't works for now
 - Zoomed Post Pics are not supported in mobile view for now 
 - Group Participant names are not shown in header of Group's DM
+- Shows Empty Bubble for posts those were from external pages/friend's profile
 - Tell More If You Find 
 
 ## Note
