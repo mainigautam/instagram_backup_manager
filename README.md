@@ -41,11 +41,13 @@ I have provided links and methods for those below.
 - [X] Can Load On Your Mobile Via React's Local IP server in full mobile view 
 
 ## Todo:
+- Adapt New and Old Both Backup Formats
 - [x] Reduce the install steps
 - [x] Add Upload zip and go feature
 - [ ] Convert to native app 
 
 ## Known Bugs
+- Backups Dated In Year 2021 are not working as Instagram Made Changes in Backup Format (Will Be Fixed Soon)
 - ~~The Data with 0 following, followers or posts isn't loading~~
 - Timeline Feature Dosen't works for now
 - Zoomed Post Pics are not supported in mobile view for now 
