@@ -1,4 +1,4 @@
-# Instagram Backup Manager
+# Instagram Backup Manager / Instagram Backup Data Viewer
  A Simple web application makes your Instagram Account Backup Data readable to a great extent .  
 
 ## Pre-Requisite
@@ -39,11 +39,11 @@ I have provided links and methods for those below.
 - [X] Group Chats 
 - [X] Followers and Following Number and List .
 - [X] Can Load On Your Mobile Via React's Local IP server in full mobile view 
+- [X] Just Upload Backup Zip and Explore you backup data
 
 ## Todo:
-- Adapt New and Old Both Backup Formats
-- [x] Reduce the install steps
-- [x] Add Upload zip and go feature
+- [ ] Adapt New and Old Both Backup Formats
+- [ ] More Reduction in Size and Install Time
 - [ ] Convert to native app 
 
 ## Known Bugs
