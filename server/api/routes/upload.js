@@ -21,10 +21,19 @@ const uploadRoute = (app, fs) => {
     storage: storage,
   });
 
+  app.get('/existing',(req,res)=>{
+    if(fs.existsSync('../data')){
+      res.send(true);
+    }else{
+      res.send(false);
+    }
+  });
+
   app.post('/delete',(req,res)=>{
     del('../data/', {force : true})
-    res.redirect('http://localhost:3000/')
-  })
+    del('../temp/bak.zip', {force : true})
+    res.redirect('http://localhost:3000/upload')
+  });
 
   app.post("/upload", upload.single("Upload"), function (req, res, next) {
     fs.createReadStream("../temp/bak.zip").pipe(
