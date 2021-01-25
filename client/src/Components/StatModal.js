@@ -10,8 +10,9 @@ const StatModal = ({connections,shw,selection,close}) => {
                             Followers
                         </div>
                         <div className="statArea">
-                            {
-                                Object.keys(connections.followers).map((d,i)=>{
+                            { connections.followers === undefined ?
+                            `No ${connections}`                            
+                            : Object.keys(connections.followers).map((d,i)=>{
                                     return(
                                             <div className="connection">
                                                 <div className="connectionInitial">
@@ -37,10 +38,11 @@ const StatModal = ({connections,shw,selection,close}) => {
                                 Following
                             </div>
                             <div className="statArea">
-                                {
-                                    Object.keys(connections.following).map((d,i)=>{
+                                { connections.following === undefined?
+                                    `No ${connections}`
+                                   : Object.keys(connections.following).map((d,i)=>{
                                         return(
-                                                <div className="connection">
+                                                <div className="connection" key={i}>
                                                     <div className="connectionInitial2">
                                                         {d[0]}
                                                     </div>
