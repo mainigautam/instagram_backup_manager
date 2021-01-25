@@ -35,7 +35,7 @@ I have provided links and methods for those below.
  ## Features
 - [X] Display Profile Data With Images
 - [X] Stories Archive (Pics and Videos)
-- [X] Direct Messages With Likes ,TimeStamps , Pics Sent (By You Only due to limitations)
+- [X] Direct Messages With Likes ,TimeStamps , Reactions and Media Exchanged
 - [X] Group Chats 
 - [X] Followers and Following Number and List .
 - [X] Can Load On Your Mobile Via React's Local IP server in full mobile view 
@@ -58,8 +58,8 @@ I have provided links and methods for those below.
 ## Note
 > **All The Code and Assests of This project are created by me only not copy pasted or pirated**
 
-> **Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes, comments and the pictures sent by your friends 
- and i cannot do anything about the stuff instagram itself dosen't provide** 
+> **Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes and comments information
+so i cannot do anything about the stuff instagram itself dosen't provide** 
 
 >  **Feel Free To Give Pull Requests and Comment Feature Requests.**
  
