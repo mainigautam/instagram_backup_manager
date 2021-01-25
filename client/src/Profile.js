@@ -5,6 +5,7 @@ import './style/profile.css'
 import './style/navigator.css'
 import './style/inbox.css'
 import './style/messages.css'
+import userImage from './Components/user.png'
 import StatModal from './Components/StatModal';
 const Profile = () => {
 
@@ -62,7 +63,11 @@ if(loading){
 
         {/* Header Section Begins Here */}
         <div className='header'>
-            <img src={media.profile[0].path} alt="" className='profilePhoto' />
+            {media.profile === undefined
+            ? <img src={userImage} alt="" className='profilePhoto' />
+            : <img src={media.profile[0].path} alt="" className='profilePhoto' />
+
+            }
             <div className='statsHolder'>
                 <div className='userName'>
                             {profile.username}

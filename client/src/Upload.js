@@ -12,7 +12,7 @@ const Upload = () => {
         <div className="main">
         <img src="https://img.icons8.com/nolan/300/instagram-new.png" alt=""/>
           <form action="/upload" method="post" encType="multipart/form-data">
-            <label for="Upload" className="uploadLabel">
+            <label htmlFor="Upload" className="uploadLabel">
               Please Select The Backup File:
             </label>
             <br />
