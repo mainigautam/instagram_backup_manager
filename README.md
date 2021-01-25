@@ -1,4 +1,4 @@
-# Instagram Backup Manager
+# Instagram Backup Manager / Instagram Backup Data Viewer
  A Simple web application makes your Instagram Account Backup Data readable to a great extent .  
 
 ## Pre-Requisite
@@ -39,17 +39,20 @@ I have provided links and methods for those below.
 - [X] Group Chats 
 - [X] Followers and Following Number and List .
 - [X] Can Load On Your Mobile Via React's Local IP server in full mobile view 
+- [X] Just Upload Backup Zip and Explore you backup data
 
 ## Todo:
-- [x] Reduce the install steps
-- [x] Add Upload zip and go feature
+- [ ] Adapt New and Old Both Backup Formats
+- [ ] More Reduction in Size and Install Time
 - [ ] Convert to native app 
 
 ## Known Bugs
+- Backups Dated In Year 2021 are not working as Instagram Made Changes in Backup Format (Will Be Fixed Soon)
 - ~~The Data with 0 following, followers or posts isn't loading~~
 - Timeline Feature Dosen't works for now
 - Zoomed Post Pics are not supported in mobile view for now 
 - Group Participant names are not shown in header of Group's DM
+- Shows Empty Bubble for posts those were from external pages/friend's profile
 - Tell More If You Find 
 
 ## Note
