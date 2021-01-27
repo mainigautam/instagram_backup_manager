@@ -16,7 +16,7 @@ I have provided links and methods for those below.
 
 ### MacOS 
 [Download Node.js](https://nodejs.org/en/download/)
-**git is pre-installed on macOS but if not then run `git --version` then i'll prompt you to install**
+**git is pre-installed on macOS but if not then run `git --version` then it'll prompt you to install**
 
 
 ## Setup 
@@ -42,12 +42,14 @@ I have provided links and methods for those below.
 - [X] Just Upload Backup Zip and Explore you backup data
 
 ## Todo:
-- [ ] Adapt New and Old Both Backup Formats
+- [X] Adapt New and Old Both Backup Formats
+- [ ] Add Reactions and External Links to Acutal Instagram Sources
 - [ ] More Reduction in Size and Install Time
+- [ ] Bundle Frontend
 - [ ] Convert to native app 
 
 ## Known Bugs
-- Backups Dated In Year 2021 are not working as Instagram Made Changes in Backup Format (Will Be Fixed Soon)
+- ~~Backups Dated In Year 2021 are not working as Instagram Made Changes in Backup Format (Will Be Fixed Soon)~~
 - ~~The Data with 0 following, followers or posts isn't loading~~
 - Timeline Feature Dosen't works for now
 - Zoomed Post Pics are not supported in mobile view for now 
@@ -56,10 +58,11 @@ I have provided links and methods for those below.
 - Tell More If You Find 
 
 ## Note
-> **All The Code and Assests of This project are created by me only not copy pasted or pirated**
 
 > **Instagram Has put many limitations in the backup version of your accounts it dosen't provide the likes and comments information
 so i cannot do anything about the stuff instagram itself dosen't provide** 
+
+> **Backups Dated Before 2021 may vary in layout from those of 2021**
 
 >  **Feel Free To Give Pull Requests and Comment Feature Requests.**
  
