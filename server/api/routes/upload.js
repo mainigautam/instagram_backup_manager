@@ -29,6 +29,14 @@ const uploadRoute = (app, fs) => {
     }
   });
 
+  app.get('/v2',(req,res)=>{
+    if(fs.existsSync('../data/messages')){
+      res.send(true);
+    }else{
+      res.send(false);
+    }
+  });
+
   app.post('/delete',(req,res)=>{
     del('../data/', {force : true})
     del('../temp/bak.zip', {force : true})

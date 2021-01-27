@@ -20,3 +20,4 @@ app.use('/photo/:id' , express.static("../data/profile"));
 app.use('/profile/' , express.static("../data/profile"));
 app.use('/direct/direct/' , express.static("../data/direct"));
 app.use('/server.css' , express.static(__dirname + "/api/routes/server.css"))
+app.use('/messages/inbox/',express.static('../data/messages/inbox'));

@@ -2,35 +2,55 @@ import React , {useState,useEffect} from 'react'
 import Profile from './Profile'
 import Media from './Media'
 import Direct from './Direct'
+import Direct2 from './Direct2'
 import Messages from './Components/Messages'
+import Messages2 from './Components/Messages2'
 import Post from './Components/Post.js'
 import Upload from './Upload.js'
 import {Route,Switch} from 'react-router-dom';
 const App = () => {
-    const [already , setAlready] = useState(false)
+    const [already , setAlready] = useState(false);
+    const [loading , setLoading] = useState(true)
+    const [v2 , setV2] = useState(false);
     const fetchData = async  () => {
-        const result= await fetch('/existing');
-        const data = await result.json();
-        setAlready(data);
+        const result= await Promise.all([
+            fetch('/v2'),
+            fetch('/existing')
+        ]).then(function (responses) {
+            return Promise.all(responses.map(function (response) {
+                return response.json();
+        }));})
+        setAlready(result[1]);
+        setV2(result[0]);
+        setLoading(false);
     }
     useEffect( ()=>{
         fetchData();
     },[]);
-    console.log(already);
-    return (
-        <>     
-        <Switch>
-            <Route exact path='/' component={ already ? Profile :Upload} />
-            <Route exact path='/upload' component={Upload}/>
-            <Route exact path="/profile" component={Profile}/>
-            <Route exact path='/photo/:id' component={Post}/>
-            <Route exact path='/direct' component={Direct} />
-            <Route exact path='/direct/:id' component={Messages} />
-            <Route exact path='/timeline' component={Profile} />
-            <Route exact path='/media' component={Media} />
-        </Switch>
-        </>
-    )
+
+    if(loading){
+        return(
+                <>
+                    <div className="coverScreen">
+                        <img src="https://img.icons8.com/nolan/50/instagram-new.png" alt="" className="lazyLoader"/>
+                    </div>
+                </>
+        )}else{
+                return (
+                    <>     
+                    <Switch>
+                        <Route exact path='/' component={ already ? Profile :Upload} />
+                        <Route exact path='/upload' component={Upload}/>
+                        <Route exact path="/profile" component={Profile}/>
+                        <Route exact path='/photo/:id' component={Post}/>
+                        <Route exact path='/direct' component={v2 ? Direct2 : Direct} />
+                        <Route exact path='/direct/:id' component={v2 ? Messages2 : Messages} />
+                        <Route exact path='/timeline' component={Profile} />
+                        <Route exact path='/media' component={Media} />
+                    </Switch>
+                    </>
+                )
+        }
 }
 
 export default App
