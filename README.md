@@ -18,13 +18,13 @@ I have provided links and methods for those below.
 
 
 ## Setup 
-**[*]** It's Pretty Easy just click on "Download" then --> "**Download Zip**" Button Above ☝️ (The One in Green Colour).
+**[*]** It's Pretty Easy just click on "Code Button" (The One in Green Colour) then --> "**Download Zip**" to download code.
 
 **[*]** After Downloading , Extract the zip file  
 
 **[*]** Now in the extracted folder run (double click) **setup.bat** to install all the dependencies.
 
-**[*]** After Setup is Done, Run(double click) On **run.bat**.
+**[*]** After Setup is Done, open/run/double click **run.bat**.
 
  This will open the browser window automatically. Then click on choose file and select your Instagram Backup's Zip File.
 
