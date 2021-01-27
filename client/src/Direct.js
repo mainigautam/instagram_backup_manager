@@ -74,7 +74,12 @@ if(loading){
                                         Instagram Backup Manager
                                     </div>
                                 </div>
-
+                                {arrUsr.length <= 0 ? 
+                                <div>
+                                    <div className="noPost">
+                                        No Messages To Show in this Backup
+                                    </div>
+                                </div> :
                                 <div>
                                     {arrUsr.map((info,i)=>{
                                     return(
@@ -93,7 +98,7 @@ if(loading){
                                                 </div>
                                             </Link>
                                     )})}
-                                </div>
+                                </div>}
                                 {/*Footer Starts Here  */}
                                 <Footer />
                             </div>

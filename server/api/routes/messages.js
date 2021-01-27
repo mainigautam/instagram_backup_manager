@@ -1,3 +1,5 @@
+const { json } = require("body-parser");
+
 const messageRoute = (app,fs) => {
 
     const dataPath = "../data/messages.json"
@@ -27,7 +29,11 @@ const messageRoute = (app,fs) => {
       })
     })
     app.get('/recipients',(req,res)=>{
-      res.send(fs.readdirSync('../data/messages/inbox'));
+      if(fs.existsSync('../data/messages/inbox')){
+        res.send(fs.readdirSync('../data/messages/inbox'));
+      }else{
+        res.json("No messages to show in this Backup")
+      }
     })
   };
 

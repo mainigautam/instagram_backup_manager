@@ -49,6 +49,12 @@ const Direct2 = () => {
             </div>  
           </div>
         </div>
+        {typeof(recipients) !== "object" ? 
+          <div>
+            <div className="noPost">
+                {recipients}
+            </div>
+          </div> :
         <div>
           {recipients.map((info, i) => {
             return (
@@ -67,6 +73,8 @@ const Direct2 = () => {
             );
           })}
         </div>
+        }
+        {console.log(typeof(recipients))}
         {/*Footer Starts Here  */}
         <Footer />
       </>
