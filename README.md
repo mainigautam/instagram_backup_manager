@@ -2,35 +2,33 @@
  A Simple web application makes your Instagram Account Backup Data readable to a great extent .  
 
 ## Pre-Requisite
-You must have internet connection (to install dependencies and load CSS Elements) and You Must have node.js , git installed on your pc , 
+You must have internet connection (to install dependencies and load CSS Elements) and You Must have node.js installed on your pc , 
 I have provided links and methods for those below.
 
 ## How to Setup
 
 ### Windows Users
 [Download Node.js](https://nodejs.org/en/download/) ,
-[Download Git for Windows](https://git-scm.com/download/win)
 
 ### Linux Users 
-`sudo apt-get upgrade && sudo apt-get install nodejs git`
+`sudo apt-get upgrade && sudo apt-get install nodejs`
 
 ### MacOS 
 [Download Node.js](https://nodejs.org/en/download/)
-**git is pre-installed on macOS but if not then run `git --version` then it'll prompt you to install**
 
 
 ## Setup 
-**[*]** It's Pretty Easy just clone the code by opening terminal/cmd and type:
+**[*]** It's Pretty Easy just click on "Download" then --> "**Download Zip**" Button Above ☝️ (The One in Green Colour).
 
- `git clone https://github.com/mainigautam/instagram_backup_manager.git -b igbm-1.0 igbm`
+**[*]** After Downloading , Extract the zip file  
 
-**[*]** this will create a folder named **"igbm"** with all the code 
+**[*]** Now in the extracted folder run (double click) **setup.bat** to install all the dependencies.
 
-**[*]** After that go back to igbm directory and double click **setup.bat** to install all the dependencies.
-
-**[*]** After Setup is Done double click On **run.bat**.
+**[*]** After Setup is Done, Run(double click) On **run.bat**.
 
  This will open the browser window automatically. Then click on choose file and select your Instagram Backup's Zip File.
+
+ >Note: Advance users can use git clone to clone the repo and use suitable terminal commands for batch files
  
  ## Features
 - [X] Display Profile Data With Images
