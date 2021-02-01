@@ -75,7 +75,7 @@ const Messages = ({match}) => {
                     </div>
                     {/* Map The Text Of Sender and Receiver */}
                     {mesArr.reverse().map((chat,i)=>{
-                        if(chat.sender_name === username){
+                        if(decodeURIComponent(escape(chat.sender_name)) === username){
                             var dateS = new Date(chat.timestamp_ms);
                                 if(chat.photos !== undefined){
                                     return (
@@ -107,7 +107,7 @@ const Messages = ({match}) => {
                                     </div>
                                 )
                             }
-                        }else if(chat.sender_name !== username && chat.photos !==undefined){
+                        }else if(decodeURIComponent(escape(chat.sender_name)) !== username && chat.photos !==undefined){
                             var dateRP = new Date(chat.timestamp_ms);
                             return (
                                 <div className='convoAreaR' key={i}>
@@ -128,12 +128,12 @@ const Messages = ({match}) => {
                                 <div className='convoAreaR' key={i}>
                                     <div className='senderInitHolder'>
                                         <div className = 'senderInitial'>
-                                            {chat.sender_name===null?  "I" :chat.sender_name[0]}
+                                            {decodeURIComponent(escape(chat.sender_name))===null?  "I" :chat.sender_name[0]}
                                         </div>
                                     </div>
                                     <div className="tooltip">
                                         <div className="tooltiptext">
-                                            {chat.sender_name}<br/>
+                                            {decodeURIComponent(escape(chat.sender_name))}<br/>
                                             {dateR.toDateString()}<br/>
                                             {dateR.toLocaleTimeString()}
                                         </div>
