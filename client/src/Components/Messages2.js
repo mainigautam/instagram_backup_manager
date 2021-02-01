@@ -1,6 +1,8 @@
 import React , {useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import Footer from './Footer';
+import instaLogo from './instagram-new.png'
+
 const Messages = ({match}) => {
 
     //Fetch Data
@@ -50,7 +52,7 @@ const Messages = ({match}) => {
         return (
             <>
                 <div className="coverScreen">
-                    <img src="https://img.icons8.com/nolan/50/instagram-new.png" alt="" className="lazyLoader"/>
+                    <img src={instaLogo} alt="" className="lazyLoader"/>
                 </div>
             </>
         )

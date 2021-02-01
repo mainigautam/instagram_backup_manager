@@ -1,5 +1,6 @@
 import React from "react";
 import "./style/upload.css";
+import instaLogoLarge from './Components/instagram-new-up.png'
 const Upload = () => {
   return (
     <>
@@ -10,7 +11,7 @@ const Upload = () => {
       {/* Header End */}
       <div className="wrapper">
         <div className="main">
-        <img src="https://img.icons8.com/nolan/300/instagram-new.png" alt=""/>
+        <img src={instaLogoLarge} alt=""/>
           <form action="/upload" method="post" encType="multipart/form-data">
             <label htmlFor="Upload" className="uploadLabel">
               Please Select The Backup File:

@@ -6,8 +6,10 @@ import Direct2 from './Direct2'
 import Messages from './Components/Messages'
 import Messages2 from './Components/Messages2'
 import Post from './Components/Post.js'
+import instaLogo from './Components/instagram-new.png'
 import Upload from './Upload.js'
 import {Route,Switch} from 'react-router-dom';
+import Reels from './Reels'
 const App = () => {
     const [already , setAlready] = useState(false);
     const [loading , setLoading] = useState(true)
@@ -32,7 +34,7 @@ const App = () => {
         return(
                 <>
                     <div className="coverScreen">
-                        <img src="https://img.icons8.com/nolan/50/instagram-new.png" alt="" className="lazyLoader"/>
+                        <img src={instaLogo} alt="" className="lazyLoader"/>
                     </div>
                 </>
         )}else{
@@ -45,7 +47,7 @@ const App = () => {
                         <Route exact path='/photo/:id' component={Post}/>
                         <Route exact path='/direct' component={v2 ? Direct2 : Direct} />
                         <Route exact path='/direct/:id' component={v2 ? Messages2 : Messages} />
-                        <Route exact path='/timeline' component={Profile} />
+                        <Route exact path='/reels' component={Reels} />
                         <Route exact path='/media' component={Media} />
                     </Switch>
                     </>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {Link} from 'react-router-dom';
 import Footer from "./Components/Footer";
+import instaLogo from './Components/instagram-new.png'
 
 const Direct2 = () => {
   //Fetch Data
@@ -27,7 +28,7 @@ const Direct2 = () => {
       <>
         <div className="coverScreen">
           <img
-            src="https://img.icons8.com/nolan/50/instagram-new.png"
+            src={instaLogo}
             alt=""
             className="lazyLoader"
           />

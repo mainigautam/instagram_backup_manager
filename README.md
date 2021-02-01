@@ -2,13 +2,13 @@
  A Simple web application makes your Instagram Account Backup Data readable to a great extent .  
 
 ## Pre-Requisite
-You must have internet connection (to install dependencies and load CSS Elements) and You Must have node.js installed on your pc , 
+You must have internet connection (to install dependencies) and You Must have node.js installed on your pc , 
 I have provided links and methods for those below.
 
 ## How to Setup
 
 ### Windows Users
-[Download Node.js](https://nodejs.org/en/download/) ,
+[Download Node.js](https://nodejs.org/en/download/)
 
 ### Linux Users 
 `sudo apt-get upgrade && sudo apt-get install nodejs`
@@ -41,7 +41,8 @@ I have provided links and methods for those below.
 
 ## Todo:
 - [X] Adapt New and Old Both Backup Formats
-- [ ] Add Reactions and External Links to Acutal Instagram Sources
+- [ ] Reels Option [WIP]
+- [ ] Add Reactions and External Links to Acutal Instagram Sources [WIP]
 - [ ] More Reduction in Size and Install Time
 - [ ] Bundle Frontend
 - [ ] Convert to native app 

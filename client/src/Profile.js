@@ -6,6 +6,7 @@ import './style/navigator.css'
 import './style/inbox.css'
 import './style/messages.css'
 import userImage from './Components/user.png'
+import instaLogo from './Components/instagram-new.png'
 import StatModal from './Components/StatModal';
 const Profile = () => {
 
@@ -41,7 +42,7 @@ if(loading){
     return(
             <>
                 <div className="coverScreen">
-                    <img src="https://img.icons8.com/nolan/50/instagram-new.png" alt="" className="lazyLoader"/>
+                    <img src={instaLogo} alt="" className="lazyLoader"/>
                 </div>
             </>
     )}else{
@@ -135,6 +136,7 @@ if(loading){
 
         {/*Footer Starts Here  */}
         <Footer />
+        {console.log(media)}
     </>
     )
   }

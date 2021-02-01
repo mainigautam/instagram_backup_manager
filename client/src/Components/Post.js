@@ -1,5 +1,6 @@
 import React , {useEffect,useState} from 'react'
 import {Link} from 'react-router-dom';
+import instaLogo from './instagram-new.png'
 import '../style/post.css';
 const Post = ({match}) => {
     const {params : { id } } = match; //Index Id
@@ -29,7 +30,7 @@ if(loading){
     return(
             <>
                 <div className="coverScreen">
-                <img src="https://img.icons8.com/nolan/50/instagram-new.png" alt="" className="lazyLoader"/>
+                <img src={instaLogo} alt="" className="lazyLoader"/>
                 </div>
             </>
     )}else{
