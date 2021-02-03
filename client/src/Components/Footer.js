@@ -4,11 +4,11 @@ import {Link} from 'react-router-dom';
 const Footer = () => {
     return (
              <div className='footNav footText'>
-                <Link to="/timeline">
+                <Link to="/reels">
                     <div className='footBut'>
-                        <i className="fas fa-2x fa-clock"></i>
+                        <i className="fas fa-2x fa-film"></i>
                         <div className="footText">
-                            Timeline
+                            Reels
                         </div>
                     </div>
                 </Link>

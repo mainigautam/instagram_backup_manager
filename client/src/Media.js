@@ -59,7 +59,7 @@ if(loading){
                                     onMouseLeave={(e)=>{setHover(false)}}
                                     >
                                         <div>   
-                                            <video controls onClick={(e)=>{e.preventDefault()}}>
+                                            <video onClick={(e)=>{e.preventDefault()}}>
                                                 <source src={story.path} type="video/mp4"/>
                                             </video>
                                         </div>
