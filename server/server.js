@@ -15,7 +15,7 @@ app.listen(port, ()=>{
 
 app.use('/stories/' , express.static("../data/stories"));
 app.use('/photos/' , express.static("../data/photos"));
-app.use('/reels', express.static('../data/videos'))
+app.use('/videos/', express.static('../data/videos'))
 app.use('/photo/:id' , express.static("../data/photos"));
 app.use('/photo/:id' , express.static("../data/profile"));
 app.use('/profile/' , express.static("../data/profile"));

@@ -24,10 +24,7 @@ function Media() {
     const [show , setShow] = useState(false)
     const closeModal = () => setShow(false);
     // Detailed Hover
-    const[hover , setHover] = useState(false);
-    console.log(hover);
-
-    
+    // const[hover , setHover] = useState(false);
 
 if(loading){
             return(
@@ -55,10 +52,10 @@ if(loading){
                                     <div className="storyDiv"
                                     key={i} 
                                     onClick={(e)=>{setShow(true);setUrl(story.path)}} 
-                                    onMouseEnter={(e)=>{setHover(true)}}
-                                    onMouseLeave={(e)=>{setHover(false)}}
+                                    // onMouseEnter={(e)=>{setHover(true)}}
+                                    // onMouseLeave={(e)=>{setHover(false)}}
                                     >
-                                        <div>   
+                                        <div className="video-indicator">   
                                             <video onClick={(e)=>{e.preventDefault()}}>
                                                 <source src={story.path} type="video/mp4"/>
                                             </video>
@@ -70,8 +67,8 @@ if(loading){
                                     <div className="storyDiv" 
                                     key={i} 
                                     onClick={(e)=>{setShow(true);setUrl(story.path)}} 
-                                    onMouseEnter={(e)=>{setHover(true)}}
-                                    onMouseLeave={(e)=>{setHover(false)}}
+                                    // onMouseEnter={(e)=>{setHover(true)}}
+                                    // onMouseLeave={(e)=>{setHover(false)}}
                                     >
                                         <img src={story.path} alt={story.caption}  className="storyImage" />
                                         
