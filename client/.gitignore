@@ -24,3 +24,5 @@ yarn-error.log*
 
 data
 /data
+temp
+../temp/bak.zip

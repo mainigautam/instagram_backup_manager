@@ -75,7 +75,6 @@ const Direct2 = () => {
           })}
         </div>
         }
-        {console.log(typeof(recipients))}
         {/*Footer Starts Here  */}
         <Footer />
       </>
