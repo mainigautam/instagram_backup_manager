@@ -2,6 +2,7 @@ import React , {useEffect,useState} from 'react'
 import {Link} from 'react-router-dom';
 import instaLogo from './instagram-new.png'
 import '../style/post.css';
+import Footer from './Footer'
 const Post = ({match}) => {
     const {params : { id } } = match; //Index Id
 
@@ -21,10 +22,10 @@ const Post = ({match}) => {
         setProfile(result[0]);
         setLoading(false);
     }
-    useEffect( ()=>{
+    useEffect(()=>{
         fetchData();
     },[]);
-
+    const [expanded,expand] = useState(false)
 /////////////////////////////////////////////////////////////////////////
 if(loading){
     return(
@@ -65,8 +66,12 @@ if(loading){
                                 <img src={media.photos[id].path} alt={media.photos[id].caption} className="postPic" />
                             </div>
                             <div className="postFooter">    
-                                <div className="postCaption">
-                                    {media.photos[id].caption}
+                                <div className="postCaptionHolder">
+                                    <div className={expanded ? "postCaptionExp" : "postCaption"}>
+                                        <b>{profile.username}:</b>
+                                        {media.photos[id].caption}
+                                        <div className={expanded? "captionExpandHidden" :"captionExpand"} onClick={(e)=>{expand(true)}}><b>more</b></div>
+                                    </div>
                                 </div>
                                 <div className="sticker">
                                     <div className="postDate">
@@ -77,40 +82,7 @@ if(loading){
                         </div>
                     </div>
                     {/*Footer Starts Here  */}
-                    <div className='footNav footText'>
-                    <Link to="/timeline">
-                            <div className='footBut'>
-                                <i className="fas fa-2x fa-clock"></i>
-                                <div className="footText">
-                                    Timeline
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to="/direct">
-                            <div className='footBut'>
-                                <i className="fas fa-2x fa-paper-plane"></i>
-                                <div className="footText">
-                                    Direct
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to="/profile">
-                            <div className='footBut'>
-                                <i className="fas fa-2x fa-user icon-selected"></i>
-                                <div className="footText">
-                                    Profile
-                                </div>
-                            </div>
-                        </Link>
-                        <Link to="/media">
-                            <div className='footBut'>
-                                <i className="fas fa-2x fa-photo-video"></i>
-                                <div className="footText">
-                                    Media
-                                </div>
-                            </div>
-                        </Link>
-                    </div>
+                    <Footer profile={true}/>
                 </>
             )
     }

@@ -35,23 +35,28 @@ const Reels = () => {
                         Instagram Backup Manager 
                     </div>
                 </div>
-                <div className="storyArea">
-                    {media.videos.map((reel,i)=>{
-                    return(
-                    <div className="storyDiv" key={i} onClick={(e)=>{
-                        setShow(true);
-                        setUrl(reel.path);
-                        setCaption(reel.caption);
-                        setDate(reel.taken_at);
-                        }} >
-                        <div className="video-indicator">   
-                            <video onClick={(e)=>{e.preventDefault()}}>
-                                <source src={reel.path} type="video/mp4"/>
-                            </video>
+                {media.videos !== undefined?
+                    <div className="storyArea">
+                        {media.videos.map((reel,i)=>{
+                        return(
+                        <div className="storyDiv" key={i} onClick={(e)=>{
+                            setShow(true);
+                            setUrl(reel.path);
+                            setCaption(reel.caption);
+                            setDate(reel.taken_at);
+                            }} >
+                            <div className="video-indicator">   
+                                <video onClick={(e)=>{e.preventDefault()}}>
+                                    <source src={reel.path} type="video/mp4"/>
+                                </video>
+                            </div>
                         </div>
+                        )})}
+                    </div>:
+                    <div className="storyArea noPost">
+                        No Reels Were Uploaded At The Time This Backup Was Created
                     </div>
-                    )}) }
-                </div>
+                    }
                 <Modal2 
                     url={url} 
                     show={show} 
@@ -60,7 +65,7 @@ const Reels = () => {
                     date={date}
                     />
                 {/* Footer Begin */}
-                <Footer/>
+                <Footer reels={true}/>
             </>
             )
         }

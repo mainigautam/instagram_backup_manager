@@ -149,7 +149,7 @@ const Messages = ({match}) => {
                         }
                         })}
                     {/*Footer Starts Here  */}
-                    <Footer/>
+                    <Footer direct={true}/>
                 </>
         )
     }

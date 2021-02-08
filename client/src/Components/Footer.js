@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 
-const Footer = () => {
+const Footer = ({profile,reels,direct,media}) => {
     return (
              <div className='footNav footText'>
                 <Link to="/reels">
                     <div className='footBut'>
-                        <i className="fas fa-2x fa-film"></i>
+                        <i className={`fas fa-2x fa-film ${reels ? "icon-selected":""}`}></i>
                         <div className="footText">
                             Reels
                         </div>
@@ -14,7 +14,7 @@ const Footer = () => {
                 </Link>
                 <Link to="/direct">
                     <div className='footBut'>
-                        <i className="fas fa-2x fa-paper-plane"></i>
+                        <i className={`fas fa-2x fa-paper-plane ${direct ? "icon-selected":""}`}></i>
                         <div className="footText">
                             Direct
                         </div>
@@ -22,7 +22,7 @@ const Footer = () => {
                 </Link>
                 <Link to="/profile">
                     <div className='footBut'>
-                        <i className="fas fa-2x fa-user"></i>
+                        <i className={`fas fa-2x fa-user ${profile ? "icon-selected":""}`}></i>
                         <div className="footText">
                             Profile
                         </div>
@@ -30,7 +30,7 @@ const Footer = () => {
                 </Link>
                 <Link to="/media">
                     <div className='footBut'>
-                        <i className="fas fa-2x fa-photo-video"></i>
+                        <i className={`fas fa-2x fa-photo-video ${media ? "icon-selected":""}`}></i>
                         <div className="footText">
                             Stories
                         </div>

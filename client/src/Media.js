@@ -90,7 +90,7 @@ if(loading){
                     />
 
                     {/*Footer Starts Here  */}
-                    <Footer />
+                    <Footer media={true}/>
                     </>
                 )
             }

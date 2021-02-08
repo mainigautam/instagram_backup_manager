@@ -76,7 +76,7 @@ const Direct2 = () => {
         </div>
         }
         {/*Footer Starts Here  */}
-        <Footer />
+        <Footer direct={true} />
       </>
     );
   }

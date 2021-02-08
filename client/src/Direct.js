@@ -101,7 +101,7 @@ if(loading){
                                     )})}
                                 </div>}
                                 {/*Footer Starts Here  */}
-                                <Footer />
+                                <Footer direct={true}/>
                             </div>
                     );
                }

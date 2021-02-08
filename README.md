@@ -41,16 +41,13 @@ I have provided links and methods for those below.
 
 ## Todo:
 - [X] Adapt New and Old Both Backup Formats
-- [ ] Reels Option [WIP]
+- [X] Reels Option [WIP]
 - [ ] Add Reactions and External Links to Acutal Instagram Sources [WIP]
 - [ ] More Reduction in Size and Install Time
 - [ ] Bundle Frontend
 - [ ] Convert to native app 
 
 ## Known Bugs
-- ~~Backups Dated In Year 2021 are not working as Instagram Made Changes in Backup Format (Will Be Fixed Soon)~~
-- ~~The Data with 0 following, followers or posts isn't loading~~
-- Timeline Feature Dosen't works for now
 - Zoomed Post Pics are not supported in mobile view for now 
 - Group Participant names are not shown in header of Group's DM
 - Shows Empty Bubble for posts those were from external pages/friend's profile

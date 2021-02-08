@@ -135,8 +135,7 @@ if(loading){
         {/* Posts Section Ends Here */}
 
         {/*Footer Starts Here  */}
-        <Footer />
-        {console.log(media)}
+        <Footer profile={true}/>
     </>
     )
   }
