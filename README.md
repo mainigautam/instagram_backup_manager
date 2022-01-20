@@ -1,3 +1,5 @@
+##  Currently working for backups taken till March 2021 (Instagram Changed Format After That).
+
 # Instagram Backup Manager / Instagram Backup Data Viewer
  A Simple web application makes your Instagram Account Backup Data readable to a great extent .  
 
