@@ -11,7 +11,7 @@ const routes = require("./routes/routes.js")(app, fs);
 app.listen(PORT,()=>{
     console.clear();
     console.log("IGBM is Running at Port http://localhost:8081/")
-    console.log("\x1b[32mBy: Gautam Maini\nGithub: https://github.com/mainigautam\nTelegram: https://t.me/mainigautam")
+    console.log("\x1b[32mBy: Gautam Maini\nGithub: https://github.com/mainigautam\nTelegram: https://t.me/mainigautam\n\nDO NOT CLOSE THIS WINDOW UNLESS YOU ARE DONE LOOKING AT YOUR BACKUP")
 })
 
 app.use('/server.css' , express.static(__dirname + "/routes/static/server.css"));
