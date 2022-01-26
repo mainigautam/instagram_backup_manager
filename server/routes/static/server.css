@@ -1,0 +1,12 @@
+body{
+    background-color: #000;
+    color: white;
+}
+.status{
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    font-size: 50px;
+    vertical-align: middle;
+    line-height: 300%;
+}
