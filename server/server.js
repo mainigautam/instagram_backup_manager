@@ -1,24 +1,24 @@
-const express = require('express')
-const app = express();
-const fs = require("fs");
+const PORT = "8081";
+const fs = require('fs');
 const bodyParser = require('body-parser');
-const port = 9000;
+const express = require('express');
+const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-// Define Rouotes in a seperate file
-const routes = require("./api/routes/routes.js")(app, fs);
+const routes = require("./routes/routes.js")(app, fs);
 
-app.listen(port, ()=>{
-    console.log("Server is Up And Running , We are Serving Files Now!")
-});
+app.listen(PORT,()=>{
+    console.clear();
+    console.log("IGBM is Running at Port http://localhost:8081/")
+    console.log("\x1b[32mBy: Gautam Maini\nGithub: https://github.com/mainigautam\nTelegram: https://t.me/mainigautam")
+})
 
-app.use('/stories/' , express.static("../data/stories"));
-app.use('/photos/' , express.static("../data/photos"));
-app.use('/videos/', express.static('../data/videos'))
-app.use('/photo/:id' , express.static("../data/photos"));
-app.use('/photo/:id' , express.static("../data/profile"));
-app.use('/profile/' , express.static("../data/profile"));
-app.use('/direct/direct/' , express.static("../data/direct"));
-app.use('/server.css' , express.static(__dirname + "/api/routes/server.css"))
-app.use('/messages/inbox/',express.static('../data/messages/inbox'));
+app.use('/server.css' , express.static(__dirname + "/routes/static/server.css"));
+app.use('/media/',express.static("../data/media"));
+app.use('/photo/media/',express.static("../data/media"));
+app.use('/direct/messages/inbox/',express.static("../data/messages/inbox"));
+app.use('/messages/inbox/',express.static("../data/messages/inbox"));
+app.use('/static/', express.static(__dirname+'/routes/build/static'));
+app.use('/*/instagram-new.png',express.static(__dirname+'/routes/build/instagram-new.png'));
+app.use('/instagram-new.png',express.static(__dirname+'/routes/build/instagram-new.png'));
