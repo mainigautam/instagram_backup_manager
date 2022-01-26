@@ -2,7 +2,7 @@ import React , {useState,useEffect} from 'react';
 import {Link} from 'react-router-dom';
 import Footer from './Footer';
 import instaLogo from './instagram-new.png'
-
+import reelIcon from './reelico.png'
 const Messages = ({match}) => {
 
     //Fetch Data
@@ -13,14 +13,14 @@ const Messages = ({match}) => {
 
     const fetchData = async () => {
         const result= await Promise.all([
-            fetch('/profile'),
-            fetch(`/message/v2/${id}`),
+            fetch('/user'),
+            fetch(`/messages/${id}`),
         ])
         .then((responses) => {
             return Promise.all(responses.map((response) => {
                 return response.json();
         }));})
-        setProfile(result[0]);
+        setProfile(result[0].profile_user);
         setMessages(result[1]);
         setLoading(false)
     }
@@ -31,7 +31,7 @@ const Messages = ({match}) => {
 
     if(!loading){
         //The Other Chat Participant
-        var username = profile.name; //Account Owner
+        var username = profile[0].string_map_data.Name === undefined ?profile[0].string_map_data.Username.value:profile[0].string_map_data.Name.value; //Account Owner
         var wout;
         if(messages.participants[0] === username){
         wout = 1;  
@@ -88,11 +88,26 @@ const Messages = ({match}) => {
                                                     {dateS.toLocaleTimeString()}
                                                 </div>
                                                 <div>
-                                                    {<img src={`/${chat.photos[0].uri}`} alt="" className="imageSent"/>}
+                                                    {<img src={chat.photos[0].uri} alt="" className="imageSent"/>}
                                                 </div>  
                                             </div>
                                         </div>
                                     )
+                            }else if(chat.content===undefined){
+                                return (
+                                    <div className='convoAreaS' key={i}>
+                                        <div className="tooltipS">
+                                            <div className="tooltiptextS">
+                                                A Reel Was Shared<br/>
+                                                {dateS.toDateString()}<br/>
+                                                {dateS.toLocaleTimeString()}
+                                            </div>
+                                            <div className="messageSent">
+                                            {<img src={reelIcon} alt=""/>}
+                                            </div>  
+                                        </div>
+                                    </div>
+                                )
                             }else{
                                 return (
                                     <div className='convoAreaS' key={i}>
@@ -119,13 +134,30 @@ const Messages = ({match}) => {
                                             {dateRP.toLocaleTimeString()}
                                         </div>
                                         <div>
-                                            {<img src={`/${chat.photos[0].uri}`} alt="" className="imageSent"/>}
+                                            {<img src={chat.photos[0].uri} alt="" className="imageSent"/>}
+                                        </div>  
+                                    </div>
+                                </div>
+                            )
+                        }else if(decodeURIComponent(escape(chat.sender_name)) !== username && chat.content===undefined){
+                            var dateR = new Date(chat.timestamp_ms);
+                            return (
+                                <div className='convoAreaR' key={i}>
+                                    <div className="tooltip">
+                                        <div className="tooltiptext">
+                                            Reel Was Shared<br/>
+                                            {decodeURIComponent(escape(chat.sender_name))}<br/>
+                                            {dateR.toDateString()}<br/>
+                                            {dateR.toLocaleTimeString()}
+                                        </div>
+                                        <div className="messageReceived">
+                                            {<img src={reelIcon} alt=""/>}
                                         </div>  
                                     </div>
                                 </div>
                             )
                         }else{
-                            var dateR = new Date(chat.timestamp_ms);
+                            var dateR1 = new Date(chat.timestamp_ms);
                             return (
                                 <div className='convoAreaR' key={i}>
                                     <div className='senderInitHolder'>
@@ -136,12 +168,11 @@ const Messages = ({match}) => {
                                     <div className="tooltip">
                                         <div className="tooltiptext">
                                             {decodeURIComponent(escape(chat.sender_name))}<br/>
-                                            {dateR.toDateString()}<br/>
-                                            {dateR.toLocaleTimeString()}
+                                            {dateR1.toDateString()}<br/>
+                                            {dateR1.toLocaleTimeString()}
                                         </div>
                                         <div className="messageReceived">
                                             {decodeURIComponent(escape(chat.content))}
-                                            {/* {chat.content} */}
                                         </div>  
                                     </div>
                                 </div>

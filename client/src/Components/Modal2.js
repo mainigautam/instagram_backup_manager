@@ -21,7 +21,7 @@ const Modal2 = ({url,show,close,caption,date}) => {
                             <source src={`${url}`} type="video/mp4"/>
                         </video>
                         <div className="ReelCaption">
-                            Caption:{caption}
+                            Caption:{decodeURIComponent(escape(caption))}
                         </div>
                         <div className="ReelUpDate">
                             {new Date(date).toDateString()}

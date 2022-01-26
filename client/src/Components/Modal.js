@@ -2,6 +2,7 @@ import React from 'react'
 import '../style/gallery.css'
 
 function Modal({url,show,close}) {
+    
     if(show && url.split('.').pop() === "mp4"){
     return (
             <div style={{display: show? "block" : "none"}} className="modalBlur">

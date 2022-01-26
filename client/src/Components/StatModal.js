@@ -1,6 +1,6 @@
 import React from 'react'
 import '../style/profile.css'
-const StatModal = ({connections,shw,selection,close}) => {
+const StatModal = ({followers,following,shw,selection,close}) => {
     if(selection==="followers"){
         return (
                 <div style={{ display : shw ? "block" : "none"}} className="statBlur">
@@ -10,16 +10,16 @@ const StatModal = ({connections,shw,selection,close}) => {
                             Followers
                         </div>
                         <div className="statArea">
-                            { connections.followers === undefined ?
-                            `No ${connections}`                            
-                            : Object.keys(connections.followers).map((d,i)=>{
+                            { followers === undefined ?
+                            `No ${followers}`                            
+                            : followers.map((d,i)=>{
                                     return(
-                                            <div className="connection">
+                                            <div className="connection" key={i}>
                                                 <div className="connectionInitial">
-                                                    {d[0]}
+                                                    {d.string_list_data[0].value[0]}
                                                 </div>
                                                 <div key={i} className="connectionName">
-                                                    {d}
+                                                    {d.string_list_data[0].value}
                                                 </div>
                                             </div>
                                     )
@@ -38,16 +38,16 @@ const StatModal = ({connections,shw,selection,close}) => {
                                 Following
                             </div>
                             <div className="statArea">
-                                { connections.following === undefined?
-                                    `No ${connections}`
-                                   : Object.keys(connections.following).map((d,i)=>{
+                                { following === undefined?
+                                    `No ${following}`
+                                   : following.map((d,i)=>{
                                         return(
                                                 <div className="connection" key={i}>
                                                     <div className="connectionInitial2">
-                                                        {d[0]}
+                                                        {d.string_list_data[0].value[0]}
                                                     </div>
                                                     <div key={i} className="connectionName">
-                                                        {d}
+                                                        {d.string_list_data[0].value}
                                                     </div>
                                                 </div>
                                         )
