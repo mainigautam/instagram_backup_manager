@@ -1,20 +1,20 @@
 {
-  "name": "thenodeserver",
+  "name": "igbm-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "author": "",
+  "keywords": [],
+  "author": "mainigautam",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.19.0",
+    "body-parser": "^1.19.1",
     "del": "^6.0.0",
-    "express": "^4.17.1",
-    "morgan": "^1.10.0",
-    "multer": "^1.4.2",
-    "nodemon": "^2.0.4",
+    "express": "^4.17.2",
+    "multer": "^1.4.4",
     "unzipper": "^0.10.11"
   }
 }
