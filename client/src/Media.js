@@ -10,9 +10,9 @@ function Media() {
     const [media , setMedia] = useState([]);
     const [loading , setLoading] = useState(true)
     const fetchData = async  () => {
-        const result= await fetch('/media');
+        const result= await fetch('/content/stories.json');
         const data = await result.json();
-        setMedia(data);
+        setMedia(data.ig_stories);
         setLoading(false);
     }
     useEffect( ()=>{
@@ -21,7 +21,7 @@ function Media() {
 
     //Modal Implementation:
     const [url , setUrl] = useState('');
-    const [show , setShow] = useState(false)
+    const [show , setShow] = useState(false);
     const closeModal = () => setShow(false);
     // Detailed Hover
     // const[hover , setHover] = useState(false);
@@ -44,20 +44,20 @@ if(loading){
                     </div>
                 
                     {/* Stories Gallery Starts Here */}
-                    {media.stories !== undefined ?
+                    {media !== undefined ?
                     <div className="storyArea">
-                    {media.stories.map((story,i)=>{
-                        if(story.path.split('.').pop() === "mp4"){
+                    {media.map((story,i)=>{
+                        if(story.uri.split('.').pop() === "mp4"){
                             return(
                                     <div className="storyDiv"
                                     key={i} 
-                                    onClick={(e)=>{setShow(true);setUrl(story.path)}} 
+                                    onClick={(e)=>{setShow(true);setUrl(story.uri)}} 
                                     // onMouseEnter={(e)=>{setHover(true)}}
                                     // onMouseLeave={(e)=>{setHover(false)}}
                                     >
                                         <div className="video-indicator">   
                                             <video onClick={(e)=>{e.preventDefault()}}>
-                                                <source src={story.path} type="video/mp4"/>
+                                                <source src={story.uri} type="video/mp4"/>
                                             </video>
                                         </div>
                                     </div>
@@ -66,11 +66,11 @@ if(loading){
                             return(
                                     <div className="storyDiv" 
                                     key={i} 
-                                    onClick={(e)=>{setShow(true);setUrl(story.path)}} 
+                                    onClick={(e)=>{setShow(true);setUrl(story.uri)}} 
                                     // onMouseEnter={(e)=>{setHover(true)}}
                                     // onMouseLeave={(e)=>{setHover(false)}}
                                     >
-                                        <img src={story.path} alt={story.caption}  className="storyImage" />
+                                        <img src={story.uri} alt={story.title}  className="storyImage" />
                                         
                                     </div>
                             )

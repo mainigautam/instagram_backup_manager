@@ -6,9 +6,9 @@ const Reels = () => {
     const [media , setMedia] = useState([]);
     const [loading , setLoading] = useState(true)
     const fetchData = async  () => {
-        const result= await fetch('/media');
+        const result= await fetch('/content/reels.json');
         const data = await result.json();
-        setMedia(data);
+        setMedia(data.ig_reels_media);
         setLoading(false);
     }
     useEffect( ()=>{
@@ -19,6 +19,7 @@ const Reels = () => {
     const [caption , setCaption] = useState('');
     const [date , setDate] = useState('')
     const closeModal = () => setShow(false);
+
     if(loading){
         return(
                 <>
@@ -35,19 +36,19 @@ const Reels = () => {
                         Instagram Backup Manager 
                     </div>
                 </div>
-                {media.videos !== undefined?
+                {media !== undefined?
                     <div className="storyArea">
-                        {media.videos.map((reel,i)=>{
+                        {media.map((reel,i)=>{
                         return(
                         <div className="storyDiv" key={i} onClick={(e)=>{
                             setShow(true);
-                            setUrl(reel.path);
-                            setCaption(reel.caption);
-                            setDate(reel.taken_at);
+                            setUrl(reel.media[0].uri);
+                            setCaption(reel.media[0].title);
+                            setDate(reel.media[0].creation_timestamp);
                             }} >
                             <div className="video-indicator">   
                                 <video onClick={(e)=>{e.preventDefault()}}>
-                                    <source src={reel.path} type="video/mp4"/>
+                                    <source src={reel.media[0].uri} type="video/mp4"/>
                                 </video>
                             </div>
                         </div>
