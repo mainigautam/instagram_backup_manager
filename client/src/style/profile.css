@@ -95,7 +95,7 @@
     padding-bottom: 30px;
 }
 .postDiv:hover{
-    opacity:85%;
+    opacity:0.8;
 }
 @media screen and (max-width: 480px) {
     .postImage{
@@ -291,7 +291,7 @@
     text-align: center;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 100px;
-    opacity: 80%;
+    opacity: 0.8;
 }
 .info{
     display: flex;

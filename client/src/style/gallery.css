@@ -15,7 +15,7 @@
 }
 .storyDiv:hover{
     /* z-index: !important; */
-    opacity: 75%;
+    opacity: 0.7;
 }
 .storyArea{
     text-align: center;
