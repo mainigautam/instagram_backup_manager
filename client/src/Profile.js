@@ -65,7 +65,8 @@ if(loading){
 
         {/* Header Section Begins Here */}
         <div className='header'>
-            {profile.media_map_data['Profile Photo'].uri === undefined
+            {profile.media_map_data['Profile Photo'] === undefined||
+            profile.media_map_data['Profile Photo'].uri === undefined
             ? <img src={userImage} alt="" className='profilePhoto' />
             : <img src={profile.media_map_data['Profile Photo'].uri} alt="" className='profilePhoto' />
 
