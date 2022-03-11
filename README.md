@@ -52,6 +52,7 @@ I have provided links and methods for those below.
 - [ ] In-page browser frame to Link to Instagram External Links.
 
 ## Known Bugs
+- Fails to unzip larger backup files via upload method (PS: Temporary fix is to unzip the backup zip in data folder manually )
 - Some of Mobile view styling is messy.
 - Group Participant names are not shown in header of Group's DM
 - DMs shows Lesser messages for Extremely Longer Chats
