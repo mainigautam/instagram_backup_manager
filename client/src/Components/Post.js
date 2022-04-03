@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import instaLogo from "./instagram-new.png";
 import "../style/post.css";
+import userImage from './user.png'
 import Footer from "./Footer";
 const Post = ({ match }) => {
   const {
@@ -32,21 +33,21 @@ const Post = ({ match }) => {
   }, []);
   const [expanded, expand] = useState(false);
   const albumLength = `${loading ? 0 : media[id].media.length}`;
-  const [photoNumber,setPhotoNumber] = useState(0);
-  const changePlus=()=>{
-    if(photoNumber<albumLength-1){
-        setPhotoNumber(photoNumber+1);
-    }else{
-        setPhotoNumber(photoNumber);
+  const [photoNumber, setPhotoNumber] = useState(0);
+  const changePlus = () => {
+    if (photoNumber < albumLength - 1) {
+      setPhotoNumber(photoNumber + 1);
+    } else {
+      setPhotoNumber(photoNumber);
     }
-  }
-  const changeMinus=()=>{
-    if(photoNumber>0){
-        setPhotoNumber(photoNumber-1);
-    }else{
-        setPhotoNumber(photoNumber);
+  };
+  const changeMinus = () => {
+    if (photoNumber > 0) {
+      setPhotoNumber(photoNumber - 1);
+    } else {
+      setPhotoNumber(photoNumber);
     }
-  }
+  };
   /////////////////////////////////////////////////////////////////////////
   if (loading) {
     return (
@@ -70,18 +71,26 @@ const Post = ({ match }) => {
 
         {/* Post Load */}
         <div className="postControls">
-          <div className={`movementButton ${photoNumber>0 ? "" : "hide"}`} onClick={changeMinus}>
+          <div
+            className={`movementButton ${photoNumber > 0 ? "" : "hide"}`}
+            onClick={changeMinus}
+          >
             <i className="fas fa-chevron-left"></i>
           </div>
           <div className="post">
             <div className="postZoomSection">
               <div className="postHeader">
                 <div className="profileInitials">
-                  <img
-                    src={profile.media_map_data["Profile Photo"].uri}
-                    alt="Profile Pic"
-                    className="profilePicInitials"
-                  />
+                  {profile.media_map_data["Profile Photo"] === undefined ||
+                  profile.media_map_data["Profile Photo"].uri === undefined ? (
+                    <img src={userImage} alt="" className="profilePicInitials" />
+                  ) : (
+                    <img
+                      src={profile.media_map_data["Profile Photo"].uri}
+                      alt="Profile Pic"
+                      className="profilePicInitials"
+                    />
+                  )}
                 </div>
                 <div className="postUser">
                   {profile.string_map_data.Username.value}
@@ -122,7 +131,7 @@ const Post = ({ match }) => {
                 </div>
                 <div className="sticker">
                   <div className="postDate">
-                    {new Date(media[id].media[0].creation_timestamp*1000)
+                    {new Date(media[id].media[0].creation_timestamp * 1000)
                       .toDateString()
                       .toString()
                       .toUpperCase()}
@@ -131,7 +140,12 @@ const Post = ({ match }) => {
               </div>
             </div>
           </div>
-          <div className={`movementButton ${photoNumber<albumLength-1 ? "" : "hide"}`} onClick={changePlus}>
+          <div
+            className={`movementButton ${
+              photoNumber < albumLength - 1 ? "" : "hide"
+            }`}
+            onClick={changePlus}
+          >
             <i className="fas fa-chevron-right"></i>
           </div>
         </div>
