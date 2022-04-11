@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
-import {Link} from 'react-router-dom';
-import Footer from "./Components/Footer";
 import instaLogo from './Components/instagram-new.png'
-
+import Header from "./Components/Header";
+import Messages2 from './Components/Messages2'
 const Direct2 = () => {
   //Fetch Data
   const [loading, setLoading] = useState(true);
   const [recipients, setRecipients] = useState();
+  const [id , setInfo] = useState(null);
   const fetchData = async () => {
     const result = await Promise.all([
       fetch("/recipients")
@@ -38,18 +38,9 @@ const Direct2 = () => {
   } else {
     return (
       <>
-        <div className="black">
-          <div className="titleBarInbox">
-            <div className="titleText text-center">
-              Instagram Backup Manager
-                <span onClick={(e)=>{
-                    alert("This Inbox is Alphabetically Ordered and not according to time as it is only order Instagram provides and Names displayed are Real/Full Names not usernames")
-                    }}>
-                    <i className="fas fa-2x fa-info-circle info"></i>
-                </span>
-            </div>  
-          </div>
-        </div>
+        <Header direct={true} />
+        <div className="masterInboxContainer">
+          <div className="masterInbox">
         {typeof(recipients) !== "object" ? 
           <div>
             <div className="noPost">
@@ -59,8 +50,7 @@ const Direct2 = () => {
         <div>
           {recipients.map((info, i) => {
             return (
-              <Link to={"direct/" + info} key={i}>
-                <div className="inbox">
+                <div className="inbox" onClick={()=>{setInfo(info)}} key={i}>
                   <div className="profileCircle">
                     <div className="subCircle">
                       <div className="profileInitials">
@@ -70,13 +60,18 @@ const Direct2 = () => {
                   </div>
                   <div className="friendName">{info.split("_")[0].length <= 3 ? info : info.split("_")[0]}</div>
                 </div>
-              </Link>
             );
           })}
         </div>
         }
-        {/*Footer Starts Here  */}
-        <Footer direct={true} />
+        </div>
+        {id===null? 
+        <div className="directExtension">
+        <i className="fas fa-6x fa-paper-plane"></i>  <br/>
+        Select a user from left to See Conversations
+        </div>
+        :<Messages2 id={id}/>}
+        </div>
       </>
     );
   }

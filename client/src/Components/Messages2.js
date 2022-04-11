@@ -1,16 +1,18 @@
 import React , {useState,useEffect} from 'react';
-import {Link} from 'react-router-dom';
-import Footer from './Footer';
+import MediaBrowser from './MediaBrowser';
 import instaLogo from './instagram-new.png'
 import reelIcon from './reelico.png'
-const Messages = ({match}) => {
+const Messages = ({id}) => {
 
     //Fetch Data
     const [profile, setProfile] = useState([]);
     const [messages , setMessages] = useState([]);
     const [loading , setLoading] = useState(true)
-    const {params: { id } } = match;
-
+    const [mediaBrowser,setMediaBrowser] = useState(false)
+    
+    const directMedia = ()=>{
+        mediaBrowser? setMediaBrowser(false): setMediaBrowser(true);
+    }
     const fetchData = async () => {
         const result= await Promise.all([
             fetch('/user'),
@@ -27,13 +29,12 @@ const Messages = ({match}) => {
     useEffect( ()=>{
         fetchData();
         // eslint-disable-next-line react-hooks/exhaustive-deps
-    },[ ]);
-
+    },[id]);
     if(!loading){
         //The Other Chat Participant
         var username = profile[0].string_map_data.Name === undefined ?profile[0].string_map_data.Username.value:profile[0].string_map_data.Name.value; //Account Owner
         var wout;
-        if(messages.participants[0] === username){
+        if(messages.participants[0] === decodeURIComponent(escape(username))){
         wout = 1;  
         }else{
         wout = 0;
@@ -60,24 +61,32 @@ const Messages = ({match}) => {
         return(
                 <>
                     {/* Title Bar */}
-                    <div className="titleBarInbox">
-                        <div className='backNav'>
-                            <Link to='/direct'>
-                                <i className="fas fa-2x fa-chevron-left white"></i>
-                            </Link>
+                    <div className="masterDirect">
+                    <div className="masterTitleBar">
+                        {mediaBrowser? 
+                        <div className='username'>
+                            Media Shared in Chat
                         </div>
+                        :<>
                         <div className="profilecircle">
-                            <div className="profileinitials">
-                                {name2.name[0].toLocaleUpperCase()} 
-                            </div>    
+                            <div className="profileinitials"> 
+                                {name2.name[0].toUpperCase()}
+                            </div>   
                         </div> 
                         <div className="username">
                             {decodeURIComponent(escape(name2.name))}
                         </div>
+                        </>}
+                        <div className='directMedia' onClick={(e)=>{directMedia()}}>
+                            {mediaBrowser?<i className="fas fa-2x fa-times-circle"></i>:
+                            <i className="fas fa-2x fa-info-circle"></i>}
+                        </div>
                     </div>
                     {/* Map The Text Of Sender and Receiver */}
+                    {mediaBrowser?<MediaBrowser id={id}/>:
+                    <div>
                     {mesArr.reverse().map((chat,i)=>{
-                        if(decodeURIComponent(escape(chat.sender_name)) === username){
+                        if(decodeURIComponent(escape(chat.sender_name)) === decodeURIComponent(escape(username))){
                             var dateS = new Date(chat.timestamp_ms);
                                 if(chat.photos !== undefined){
                                     return (
@@ -124,7 +133,7 @@ const Messages = ({match}) => {
                                     </div>
                                 )
                             }
-                        }else if(decodeURIComponent(escape(chat.sender_name)) !== username && chat.photos !==undefined){
+                        }else if(decodeURIComponent(escape(chat.sender_name)) !== decodeURIComponent(escape(username)) && chat.photos !==undefined){
                             var dateRP = new Date(chat.timestamp_ms);
                             return (
                                 <div className='convoAreaR' key={i}>
@@ -139,7 +148,7 @@ const Messages = ({match}) => {
                                     </div>
                                 </div>
                             )
-                        }else if(decodeURIComponent(escape(chat.sender_name)) !== username && chat.content===undefined){
+                        }else if(decodeURIComponent(escape(chat.sender_name)) !== decodeURIComponent(escape(username)) && chat.content===undefined){
                             var dateR = new Date(chat.timestamp_ms);
                             return (
                                 <div className='convoAreaR' key={i}>
@@ -162,7 +171,7 @@ const Messages = ({match}) => {
                                 <div className='convoAreaR' key={i}>
                                     <div className='senderInitHolder'>
                                         <div className = 'senderInitial'>
-                                            {decodeURIComponent(escape(chat.sender_name))===null?  "I" :chat.sender_name[0]}
+                                            {decodeURIComponent(escape(chat.sender_name))===null?  "I" :decodeURIComponent(escape(chat.sender_name))[0]}
                                         </div>
                                     </div>
                                     <div className="tooltip">
@@ -178,9 +187,7 @@ const Messages = ({match}) => {
                                 </div>
                             )
                         }
-                        })}
-                    {/*Footer Starts Here  */}
-                    <Footer direct={true}/>
+                        })}</div>}</div>
                 </>
         )
     }
