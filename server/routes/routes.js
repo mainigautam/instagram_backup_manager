@@ -23,6 +23,9 @@ const routes = (app, fs) => {
     app.get('/dev',(req,res)=>{
         res.sendFile(path.join(__dirname+'/static/uploaded.html'))
     })
+    app.get('/uncompactible/home',(req,res)=>{
+        res.sendFile(path.resolve('../data/index.html'))
+    })
     profileRoute(app,fs);
     mediaRoute(app,fs);
     messageRoute(app,fs);

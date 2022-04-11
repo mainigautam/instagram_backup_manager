@@ -33,7 +33,13 @@ const uploadRoute = (app, fs) => {
       res.send(false);
     }
   });
-
+  app.get('/isCompactible',(req,res)=>{
+    if (fs.existsSync('../data/index.html')) {
+      res.send(false);
+    } else {
+      res.send(true);
+    }
+  })
   app.post("/delete", (req, res) => {
     del("../data/", { force: true });
     del("./temp/bak.zip", { force: true });

@@ -22,3 +22,5 @@ app.use('/messages/inbox/',express.static("../data/messages/inbox"));
 app.use('/static/', express.static(__dirname+'/routes/build/static'));
 app.use('/*/instagram-new.png',express.static(__dirname+'/routes/build/instagram-new.png'));
 app.use('/instagram-new.png',express.static(__dirname+'/routes/build/instagram-new.png'));
+app.use('/instagram-new-up.png',express.static(__dirname+'/routes/static/instagram-new-up.png'));
+app.use('/uncompactible/',express.static('../data/'))
