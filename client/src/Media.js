@@ -1,9 +1,7 @@
 import React , {useState,useEffect} from 'react'
 import Modal from './Components/Modal';
 import './style/gallery.css'
-import Footer from './Components/Footer';
 import instaLogo from './Components/instagram-new.png'
-
 
 function Media() {
     //API
@@ -23,9 +21,6 @@ function Media() {
     const [url , setUrl] = useState('');
     const [show , setShow] = useState(false);
     const closeModal = () => setShow(false);
-    // Detailed Hover
-    // const[hover , setHover] = useState(false);
-
 if(loading){
             return(
                     <>
@@ -36,13 +31,6 @@ if(loading){
             )}else{
                 return (
                     <>
-                    {/* Nav Heading */}
-                    <div className="titleBarInbox">
-                        <div className="titleText text-center">
-                            Instagram Backup Manager
-                        </div>
-                    </div>
-                
                     {/* Stories Gallery Starts Here */}
                     {media !== undefined ?
                     <div className="storyArea">
@@ -52,8 +40,6 @@ if(loading){
                                     <div className="storyDiv"
                                     key={i} 
                                     onClick={(e)=>{setShow(true);setUrl(story.uri)}} 
-                                    // onMouseEnter={(e)=>{setHover(true)}}
-                                    // onMouseLeave={(e)=>{setHover(false)}}
                                     >
                                         <div className="video-indicator">   
                                             <video onClick={(e)=>{e.preventDefault()}}>
@@ -67,8 +53,6 @@ if(loading){
                                     <div className="storyDiv" 
                                     key={i} 
                                     onClick={(e)=>{setShow(true);setUrl(story.uri)}} 
-                                    // onMouseEnter={(e)=>{setHover(true)}}
-                                    // onMouseLeave={(e)=>{setHover(false)}}
                                     >
                                         <img src={story.uri} alt={story.title}  className="storyImage" />
                                         
@@ -88,9 +72,6 @@ if(loading){
                     show={show} 
                     close={closeModal}
                     />
-
-                    {/*Footer Starts Here  */}
-                    <Footer media={true}/>
                     </>
                 )
             }

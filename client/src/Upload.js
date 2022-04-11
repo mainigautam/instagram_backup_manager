@@ -1,12 +1,14 @@
 import React from "react";
 import "./style/upload.css";
 import instaLogoLarge from './Components/instagram-new-up.png'
+import instaOrig from './Components/insta-orig.png'
+
 const Upload = () => {
   return (
     <>
       {/* Header */}
-      <div className="titleBarInbox" style={{ border: "none" }}>
-        <div className="titleText text-center">Instagram Backup Manager</div>
+      <div className="headNav">
+        <img src={instaOrig} alt="" className='navLogo'/>
       </div>
       {/* Header End */}
       <div className="wrapper">

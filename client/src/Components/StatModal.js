@@ -14,7 +14,7 @@ const StatModal = ({followers,following,shw,selection,close}) => {
                             `No ${followers}`                            
                             : followers.map((d,i)=>{
                                     return(
-                                            <div className="connection" key={i}>
+                                            <div onClick={()=>{window.location.href=d.string_list_data[0].href}} className="connection" key={i}>
                                                 <div className="connectionInitial">
                                                     {d.string_list_data[0].value[0]}
                                                 </div>
@@ -42,7 +42,7 @@ const StatModal = ({followers,following,shw,selection,close}) => {
                                     `No ${following}`
                                    : following.map((d,i)=>{
                                         return(
-                                                <div className="connection" key={i}>
+                                                <div onClick={()=>{window.location.href=d.string_list_data[0].href}} className="connection" key={i}>
                                                     <div className="connectionInitial2">
                                                         {d.string_list_data[0].value[0]}
                                                     </div>

@@ -1,5 +1,4 @@
 import React , {useState,useEffect} from 'react'
-import Footer from './Components/Footer';
 import instaLogo from './Components/instagram-new.png'
 import Modal2 from './Components/Modal2'
 const Reels = () => {
@@ -30,12 +29,6 @@ const Reels = () => {
         )}else{
             return (
                 <>
-                {/* Nav Heading */}
-                <div className="titleBarInbox">
-                    <div className="titleText text-center">
-                        Instagram Backup Manager 
-                    </div>
-                </div>
                 {media !== undefined?
                     <div className="storyArea">
                         {media.map((reel,i)=>{
@@ -65,8 +58,6 @@ const Reels = () => {
                     caption={caption}
                     date={date}
                     />
-                {/* Footer Begin */}
-                <Footer reels={true}/>
             </>
             )
         }

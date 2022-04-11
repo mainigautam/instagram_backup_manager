@@ -1,6 +1,5 @@
 import React , { useState, useEffect} from 'react';
 import {Link} from 'react-router-dom';
-import Footer from './Components/Footer';
 import './style/profile.css'
 import './style/navigator.css'
 import './style/inbox.css'
@@ -8,6 +7,9 @@ import './style/messages.css'
 import userImage from './Components/user.png'
 import instaLogo from './Components/instagram-new.png'
 import StatModal from './Components/StatModal';
+import Header from './Components/Header'
+import Media from './Media';
+import Reels from './Reels'
 const Profile = () => {
     const [profile , setProfile] = useState();
     const [media , setMedia] = useState();
@@ -15,6 +17,7 @@ const Profile = () => {
     const [following,setFollowing] = useState();
     const [loading , setLoading] = useState(true);
     const [show , setShow] = useState(false);
+    const [mediaSelection,setMediaSelection] = useState(1)
     const [selection, setSelection] = useState('')
     const close =()=> setShow(false);
     const fetchData = async () => {
@@ -49,20 +52,7 @@ if(loading){
     )}else{
     return (
     <>
-        <div className="titleBarInbox" style={{border: "none"}}>
-            <form action="http://localhost:8081/delete" method="post">
-                <button type="submit" className="trash">
-                    <i className="fas fa-2x fa-trash-alt"></i>   
-                </button>
-            </form>
-            <div className="titleText text-center">
-                Instagram Backup Manager
-                <span onClick={(e)=>{alert("Instagram Backup Data Viewer by Gautam Maini")}}>
-                    <i className="fas fa-2x fa-info-circle info"></i>
-                </span>
-            </div>
-        </div>
-
+       <Header profile="true"/>
         {/* Header Section Begins Here */}
         <div className='header'>
             {profile.media_map_data['Profile Photo'] === undefined||
@@ -114,11 +104,37 @@ if(loading){
                 {decodeURIComponent(escape(profile.string_map_data.Bio===undefined?" ":profile.string_map_data.Bio.value))}
                 </div>
         </div>
-        <hr/>
         {/* Header Section Ends Here */}
-
+        {/* Media Slider Section */}
+        <div className="mediaSectionSelector">
+            <div className={`mediaButton ${mediaSelection===1?"mediaButtonSelected":''}`} onClick={()=>{setMediaSelection(1)}}>
+                <div className="mediaButtonIcon">
+                    <i className="fas fa-th"></i>
+                </div>
+                <div className="mediaButtonText">
+                    POSTS
+                </div>
+            </div>
+            <div className={`mediaButton ${mediaSelection===2?"mediaButtonSelected":''}`} onClick={()=>{setMediaSelection(2)}}>
+                <div className="mediaButtonIcon">
+                    <i className="fas fa-film" style={{fontSize:"16px",color:'rgb(142,142,142)',WebkitTextStroke:"transparent"}}></i>
+                </div>
+                <div className="mediaButtonText">
+                    REELS
+                </div>
+            </div>
+            <div className={`mediaButton ${mediaSelection===3?"mediaButtonSelected":''}`} onClick={()=>{setMediaSelection(3)}}>
+                <div className="mediaButtonIcon">
+                    <i className="fas fa-photo-video" style={{fontSize:"16px",color:'rgb(142,142,142)',WebkitTextStroke:"transparent"}}></i>
+                </div>
+                <div className="mediaButtonText">
+                    STORIES
+                </div>
+            </div>
+        </div>
         {/* Posts Section Starts Here */}
-        {media.undefined ===true?
+        {mediaSelection ===1?
+        media.undefined ===true?
             <div className="noPost">
                 No Posts Were Uploaded By You At The Time This Backup Was Generated!
             </div>
@@ -133,11 +149,10 @@ if(loading){
                 </Link>
            )
         })}
-        </div>} 
+        </div> : mediaSelection ===2?
+        <Reels/>:
+        <Media/>}
         {/* Posts Section Ends Here */}
-
-        {/*Footer Starts Here  */}
-        <Footer profile={true}/>
     </>
     )
   }

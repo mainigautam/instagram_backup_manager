@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import instaLogo from "./instagram-new.png";
 import "../style/post.css";
 import userImage from './user.png'
-import Footer from "./Footer";
+import Header from "./Header";
 const Post = ({ match }) => {
   const {
     params: { id },
@@ -60,15 +59,7 @@ const Post = ({ match }) => {
   } else {
     return (
       <>
-        <div className="titleBarInbox">
-          <div className="backNav">
-            <Link to="/profile">
-              <i className="fas fa-2x fa-chevron-left white"></i>
-            </Link>
-          </div>
-          <div className="titleText text-center">Instagram Backup Manager</div>
-        </div>
-
+        <Header show={true}/>
         {/* Post Load */}
         <div className="postControls">
           <div
@@ -149,8 +140,6 @@ const Post = ({ match }) => {
             <i className="fas fa-chevron-right"></i>
           </div>
         </div>
-        {/*Footer Starts Here  */}
-        <Footer profile={true} />
       </>
     );
   }
