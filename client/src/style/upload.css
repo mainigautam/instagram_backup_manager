@@ -13,7 +13,7 @@
     height: 100%;
     position: fixed;
     z-index: +1;
-    background-color: #111111;
+    background-color: #fafafa;
 }
 .uploadLabel{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -26,35 +26,35 @@
     height: 50px;
     vertical-align: middle;
     margin-top:15px;
-    background-color: #111111;
-    color: white;
+    background-color: #fafafa;
+    color: #000;
     outline: none;
     width: 300px;
     border-style: solid;
     border-width: 1px;
     border-radius: 15px;
-    border-color:white;
+    border-color:rgb(219,219,219);
 }
 .uploadField::-webkit-file-upload-button{
     height: 100%;
     margin-right: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #444444;
-    color: white;
-    border-width: 0px;
+    background-color: #74b9ff;
+    color: #fff;
+    border:0px none transparent;
     outline: none;
-    border-right-width: 1px;
-    border-color: white;
+    border-right-width: 1px solid rgb(219,219,219);
+    border-color:rgb(219,219,219);
 }
 .uploadButton{
-    border-width: 0px;
-    outline: white;
+    border: 1px solid rgb(219,219,219);
+    outline: #000;
     vertical-align: middle;
     cursor: pointer;
     width: 100px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    background-color: #444444;
-    color: white;
+    background-color: #74b9ff;
+    color: #fff;
     height: 35px;
     margin: 20px;
 }

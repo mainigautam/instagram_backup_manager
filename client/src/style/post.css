@@ -22,8 +22,8 @@
 }
 .postZoomSection{
     display: block;
-    border: 2px solid;
-    border-color: rgba(255, 255, 255, 0.336);
+    border: 1px solid;
+    border-color: rgba(219, 219,219);
     border-radius: 15px;
     position: relative;
     height: 400px;
@@ -34,7 +34,7 @@
     position: absolute;
     right: 0;
     width: 300px;
-    background-color: #222121;
+    background-color: #fff;
     border-top-right-radius: 15px;
     border-bottom: 1px solid;
 }
@@ -42,7 +42,7 @@
     width: 300px;
     height: 340px;
     display: inline-block;
-    background-color: #222121;
+    background-color: #fff;
     text-align: start;
     position: absolute;
     border-bottom-right-radius: 15px;
@@ -137,7 +137,7 @@
 }
 .postCaptionExp::-webkit-scrollbar{
     width: 3px;
-    background-color: #222121;
+    background-color: #fff;
     height: 100%;
 }
 .postLocation{
@@ -150,14 +150,13 @@
 }
 .album-indicator::before{
     content: "...";
-    font-size: 40px;
+    font-size: 60px;
     color: #ecf0f1;
     display: flex;
     font-weight: 900;
     -webkit-text-stroke: 2px #000;
-    right: 20px;
     position: absolute;
-    margin: 0px auto auto 10px;
+    margin: -10px auto auto 10px;
 }
 @media screen and (max-width: 480px) {
     .post{
@@ -178,7 +177,7 @@
         width: 300px;
         height: 50px;
         display: inline-block;
-        background-color: #222121;
+        background-color: #fff;
         border-top-left-radius: 7.5px;
         border-top-right-radius: 7.5px;
     }
@@ -213,7 +212,7 @@
         height: 40px;
         border-bottom-right-radius: 7.5px;
         border-bottom-left-radius: 7.5px;
-        background-color: #222121;
+        background-color: #fff;
         margin-bottom: 50px;
         text-align: start;
         padding: 10px;

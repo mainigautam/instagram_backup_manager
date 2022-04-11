@@ -1,23 +1,22 @@
 .black{
-    background-color: #000 !important;
+    background-color: #fafafa !important;
 }
 body{
-    background-color: #000;
+    background-color: #fafafa;
     margin-top: 50px;
     margin-bottom: 70px;
     margin-left: 0px!important;
     padding: 0;
-    color : white !important;
+    color : #262626 !important;
 }
 /* .messageHolder{
     width: 50%!important;
 } */
 .messageReceived{
     margin-top: 10px;
-    margin-bottom: 10px;
     background-color: transparent;
     border-style: solid;
-    border-color: rgba(255, 255, 255, 0.432);
+    border-color: rgba(219, 219,219);;
     border-width: 0.25px;
     max-width: 70%;
     padding: 15px;
@@ -31,8 +30,8 @@ body{
 .messageSent{
     margin-top: 10px;
     margin-bottom: 10px;
-    background-color: #222121;
-    color: #fff;
+    background-color: rgb(239,239,239);
+    color: #000;
     max-width: 100%;
     padding: 15px;
     /* margin-left: 50%; */
@@ -69,7 +68,9 @@ body{
 .convoAreaR{
     margin:0px;
     padding: 0px;
-    max-width: 65%;
+    display: flex;
+    max-width: 50%;
+    align-items: center;
 }
 .convoAreaS{
     margin:0;
@@ -80,39 +81,30 @@ body{
     justify-content: flex-end;
 }
 .senderInitHolder{
-    margin-top: 10px;
-    margin-bottom: 10px;
     background-color: #FF4081;
-    color: white;
+    color: #262626;
     border-radius: 100%;
-    max-width: 20px;
+    min-width: 20px;
+    min-height: 20px;
     width: 20px;
     height: 20px;
+    align-self: flex-end;
     text-transform: uppercase;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
     justify-content: center;
     vertical-align: middle;
-    display: inline-block;
-    margin-left: 2px ;
+    margin-left: 2px;
     margin-right: 0px;
 }
 .senderInitial{
+    color: white;
     font-size: 90%;
     line-height: 20px;
     position: relative;
     vertical-align: baseline;
 
 }
-/* .titlebar{
-    background-color: #222121;
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    top: 0px;
-    margin:0px;
-    z-index: +1;
-} */
 .profilecircle{
     background-color: #00BCD4;
     color:  #00b894;
@@ -122,7 +114,6 @@ body{
     text-align: center;
     vertical-align: middle;
     margin-left: 50px;
-    margin-top: 2px;
     display: inline-block;
     
 }
@@ -131,7 +122,7 @@ body{
     top: 10.5px; 
     font-size: 25px;
     line-height: 25px; 
-    color: #000;
+    color: #fafafa;
     font-weight: bold;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -162,48 +153,18 @@ body{
     padding:0px;
     font-size: 0px;
 }
-/* .footText{
-    padding: 10px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif   ;
-    font-weight: bold;
-    font-size: larger;
-    text-align: center;
+.navLogo{
+    height: 40px;
+    margin: auto;
 }
-.footNav{
-    background-color: #222121;
-    width: 100%;
-    height: 50px;
-    bottom: 0px;
-    position: fixed;
-    margin:0px;
-    z-index: +1;
-} */
-.footBut{
-    height: 100%;
+.headBut{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    width: 24.5%;
-    display: inline-block;
-    background-color: #222121;
-    color: white;
+    color: #262626; 
     border-style: none;
-    vertical-align: middle;
-    text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    margin-left: 1px;
-    animation-duration: 4s;
-    animation-name: logo;
-    animation-iteration-count: infinite;
-    animation-fill-mode: forwards; 
-    animation-timing-function: ease-in-out;
+    margin: 10px;
 }
-.footBut:hover{
-    background-color:rgba(0, 0, 0, 0.329);
-    color: #fff;
-    animation: none;
-}
-.footButSelected{
-    background-color:#000;
+.headButSelected{
+    background-color:#fafafa;
     color: #fff;
     animation: none;
     height: 100%;
@@ -217,28 +178,10 @@ body{
     padding-bottom: 8px;
     margin-left: 1px;
 }
-/* .fa-clock{
-    margin-right: 10px;
-    vertical-align: middle;
-    line-height: 100%;
-    text-align: center;
-}
-.fa-user{
-    margin-right: 10px;
-    vertical-align: middle;
-    line-height: 100%;
-    text-align: center;
-}
-.fa-inbox{
-    margin-right: 10px;
-    vertical-align: middle;
-    line-height: 100%;
-    text-align: center;
-} */
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
+    border-bottom: 1px black;
   }
   
   .tooltip .tooltiptext {
@@ -276,7 +219,7 @@ body{
   .tooltipS {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black;
+    border-bottom: 1px black;
   }
   
   .tooltipS .tooltiptextS {
@@ -330,4 +273,9 @@ body{
 }
 .fa-eye-slash{
     margin-top:30px;
+}
+.directMedia{
+    margin-left: auto;
+    margin-right: 30px;
+    cursor: pointer;
 }

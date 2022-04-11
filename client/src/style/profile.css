@@ -4,7 +4,6 @@
     margin-top: 3%;
     margin-right: 3%;
     margin-bottom: 3%;
-    /* background-color: #00b894; */
     height: 13%;
     width: 13%;
     min-width: 73px;
@@ -21,24 +20,21 @@
 
 }
 .header{
-    width: 100%;
+    margin: auto;
+    width: 80%;
     height: 25%;
     position: relative;
     text-align: center;
-    background-color: #222121;
 }
 .fullName{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     position: relative;
     font-weight: lighter;
-    /* vertical-align: baseline; */
     font-size: 15px;
     margin-top: 10px;
     margin-bottom: 3px;
 }
 .statsHolder{
-    /* background-color: white;
-    color: black; */
     display: inline-block;
     position: relative;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -72,30 +68,57 @@
     display:none;
 }
 .postImage{
-    width: 350px;
-    height: 350px;
+    width: 290px;
+    height: 290px;
 }
 
 .postDiv{
     display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    align-content: center;
-    align-items: center;
     margin:15px;
     padding:5px;
     cursor: pointer;
 }
 .postArea{
-    width:100%;
+    width:80%;
+    margin: auto;
     text-align: center;
-    align-content: center;
-    align-items: center;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 .postDiv:hover{
     opacity:0.8;
+}
+.mediaSectionSelector{
+    width: 60%;
+    border-top: 1px solid rgba(219, 219,219);
+    display: flex;
+    height: 50px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+}
+.mediaButton{
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 100%;
+    margin: 0px 35px 0px 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.mediaButtonSelected{
+    border-top: 1px solid black;
+}
+.mediaButtonIcon{
+    vertical-align: middle;
+    margin: 5px;
+    color: rgb(142,142,142);
+}
+.mediaButtonText{
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: rgb(142,142,142);
 }
 @media screen and (max-width: 480px) {
     .postImage{
@@ -157,19 +180,17 @@
 
 /* @media screen and (max-height: 420px) {
 }*/    
- .fa-photo-video , .fa-user , .fa-paper-plane , .fa-film{
+ .fa-photo-video , .fa-user ,.fa-trash-alt, .fa-paper-plane , .fa-film{
     color: transparent;
 	font-size: 40px;
-	-webkit-text-stroke: 2px white;
+	-webkit-text-stroke: 2px #000;
 }
-
-.fa-photo-video:hover , .fa-user:hover , .fa-paper-plane:hover , .fa-film:hover{
-    color: white;
-	font-size: 40px;
-	-webkit-text-stroke: 0px transparent;
+.fa-trash-alt:hover,.fa-user:hover,.fa-paper-plane:hover{
+    color: #000;
+    -webkit-text-stroke: 0px transparent;
 }
 .icon-selected{
-    color: white;
+    color: #000;
     font-size: 40px;
     -webkit-text-stroke: 0px transparent;
 } 
@@ -185,7 +206,7 @@
     transform: translate(-50%,-50%);
     z-index: +4;
     width: 400px;
-    background-color:#000;
+    background-color:#fafafa;
     height: 400px;
     border-radius: 15px;
     border-style: solid;
@@ -202,7 +223,7 @@
 }
 .statArea::-webkit-scrollbar{
     width: 3px;
-    background-color: #222121;
+    background-color: #fff;
     height: 100%;
 }
 .statArea::-webkit-scrollbar-thumb{
@@ -225,13 +246,13 @@
     margin: 0px;
     position: absolute;
     z-index: +4;
-    background-color:#222121;
+    background-color:#fff;
     text-align: center;
     line-height: 250%;
     border-style: solid;
     border-width: 0px;
     border-bottom-width: 0.5px;
-    border-color: grey;
+    border-color: rgba(219, 219,219);
     border-top-left-radius: 15px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     border-top-right-radius: 15px;
@@ -252,7 +273,7 @@
     border-left-width: 0px;
     border-top-width: 0px;
     border-right-width: 0px;
-    border-color: grey;
+    border-color: rgba(219, 219,219);
     cursor:pointer;
 }
 .connection:hover{
@@ -267,6 +288,7 @@
     display: inline-block;
     background-color: rgb(139, 9, 139);
     border-radius: 100%;
+    color: #fff;
     width:30px;
     height:30px;
     line-height: 30px;
@@ -277,6 +299,7 @@
 .connectionInitial2{
     display: inline-block;
     background-color: teal;
+    color: #fff;
     border-radius: 100%;
     width:30px;
     height:30px;
@@ -303,12 +326,9 @@
 }
 .trash{
     display: flex;
-    float: left;
     vertical-align: middle;
     position: relative;
-    color:white;
-    margin-left: 10px;
-    margin-top: 5px;
+    color:#000;
     background-color: transparent;
     border-width: 0px;
     outline: none;

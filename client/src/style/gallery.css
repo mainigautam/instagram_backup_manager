@@ -1,6 +1,6 @@
 .storyImage{
-    width: 175px;
-    height: 310px;
+    width: 290px;
+    height: 500px;
 }
 
 .storyDiv{
@@ -13,21 +13,52 @@
     padding:5px;
     cursor: pointer;
 }
+.mediaBrowserDiv{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height:fit-content;
+    display: block;
+    cursor: pointer;
+}
 .storyDiv:hover{
-    /* z-index: !important; */
     opacity: 0.7;
 }
 .storyArea{
+    width: 80%;
     text-align: center;
-    align-content: center;
-    align-items: center;
+    margin: auto;
     padding-top: 30px;
     padding-bottom: 30px;
 }
 video{
     background-color: white;
-    width: 175px;
-    height: 310px;
+    width: 290px;
+    height: 500px;
+}
+.mediaBrowserItem{
+    display: inline-block;
+    width: 150px;
+    border-radius:20px;
+    border: 1px solid rgb(219,219, 219);
+    height: 150px;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 5px;
+    object-fit: cover;
+}
+.mediaBrowserItem:hover{
+    opacity: 0.5;
+}
+.mediaTitle{
+    color: #242424;
+    font-size: 20px;
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid rgb(219,219, 219);
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px auto 10px auto;
 }
 .ImageModal{
     top:50%;
@@ -40,9 +71,18 @@ video{
 .modalBlur{
     position: fixed;
     background-color: rgba(0, 0, 0, 0.425);
-    z-index: +3;
+    z-index: 999;
     margin: 0px;
     width: 100%;
+    top:0px;
+    height: 100%;
+}
+.MiniModalBlur{
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.425);
+    z-index: 999;
+    margin: 0px;
+    width: 80%;
     top:0px;
     height: 100%;
 }
@@ -60,9 +100,17 @@ video{
     width: 350px;
     height: 620px;
 }
+.MiniModalImage{
+    max-width: 280px;
+    max-height: 500px;
+}
 .modalVideo{
     width: 350px;
     height: 620px;
+}
+.MiniModalVideo{
+    max-width: 280px;
+    max-height: 500px;
 }
 .modalClose{
     font-size: 80px;
@@ -84,7 +132,7 @@ video{
 .video-indicator::before{
     content: "▶";
     font-size: 30px;
-    color: #ecf0f1;
+    color: grey;
     display: flex;
     position: absolute;
     margin: 10px auto auto 10px;
@@ -108,10 +156,10 @@ video{
     align-items: center;
     margin:5px;
     max-height: 580px!important;
-    background-color: #303030;
+    background-color: #fafafa;
     cursor: pointer;
     border-radius: 15px;
-    border: 1px solid rgba(255, 255, 255, 0.671);
+    border: 1px solid rgba(219,219,219);
 }
 .ReelModal{
     top:50%;
