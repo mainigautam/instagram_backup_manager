@@ -73,15 +73,16 @@
 }
 
 .postDiv{
-    display: inline-block;
-    margin:15px;
-    padding:5px;
+    display: flex;
+    margin:15px 5px;
+    /* padding:5px; */
     cursor: pointer;
 }
 .postArea{
-    width:80%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width:60%;
     margin: auto;
-    text-align: center;
     padding-top: 30px;
     padding-bottom: 30px;
 }
