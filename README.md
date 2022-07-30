@@ -50,7 +50,6 @@ I have provided links and methods for those below.
 - [ ] In-page browser frame to Link to Instagram External Links.
 
 ## Known Bugs
-- Fails to unzip larger backup files via upload method (PS: Temporary fix is to unzip the backup zip in data folder manually )
 - Lengthy Chats can cause app to hang and Load in longer timings
 - Tell More If You Find 
 

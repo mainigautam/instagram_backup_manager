@@ -20,10 +20,10 @@ const uploadRoute = (app, fs) => {
   });
 
   app.post("/upload", upload.single("Upload"), (req, res, next) => {
-    fs.createReadStream("./temp/bak.zip").pipe(
-      unzipper.Extract({ path: "../data/" })
-    )
-    res.sendFile(path.join(__dirname+"/static/uploaded.html"));
+    fs.createReadStream('./temp/bak.zip')
+    .pipe(unzipper.Extract({path: '../data/'}))
+    .promise()
+    .then( () => res.redirect('/'), e => console.log('error',e));
   });
 
   app.get("/existing", (req, res) => {
